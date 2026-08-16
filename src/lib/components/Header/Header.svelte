@@ -1,57 +1,20 @@
-<header class="header">
-  <div class="header__left">
-    <p class="header__left__title">GRANDIORA</p>
-    <p class="header__left__subtitle">REAL ESTATE • BARCELONA</p>
-  </div>
+<script>
+	import { PHONE_MAIN, PHONE_MAIN_LINK } from '$lib/assets/data.js';
 
-  <div class="header__right">
-    <a href="tel:+" class="header__right__link">+34 930 474 510</a>
-    <a href="mailto:info@grandiora.es" class="header__right__link">info@grandiora.es</a>
-    <a href="/contact-us" class="header__right__link header__right__link--button">Contact Us</a>
-  </div>
+	let { back = false } = $props();
+</script>
+
+<div class="topline"></div>
+<header>
+	<div class="wrap header-in">
+		<div class="brand">GRANDIORA<small>REAL ESTATE · BARCELONA</small></div>
+		{#if back}
+			<div class="back"><a href="./">← Back</a></div>
+		{:else}
+			<div class="header-cta">
+				<a class="tel-link" href={PHONE_MAIN_LINK}>{PHONE_MAIN}</a>
+				<a class="btn" href="/contact">Contact us</a>
+			</div>
+		{/if}
+	</div>
 </header>
-
-<style lang="scss">
-  @use '$lib/styles/variables' as *;
-
-  .header {
-    display: flex;
-    justify-content: space-between;
-    padding: $padding-medium;
-    border-top: 3px solid #b89146;
-    border-bottom: 1px solid #b89146;
-
-    &__left {
-      &__title {
-        letter-spacing: 0.1em;
-        color: #b89146;
-        font-size: 32px;
-        margin-bottom: 16px;
-      }
-
-      &__subtitle {
-        letter-spacing: 0.4em;
-        color: #6e6e6e;
-        font-size: 14px;
-      }
-    }
-
-    &__right {
-      display: flex;
-      align-items: center;
-
-      &__link {
-        margin-left: 16px;
-        color: #6e6e6e;
-        text-decoration: none;
-
-        &--button {
-          padding: 8px 16px;
-          background-color: #b89146;
-          color: #fff;
-          border-radius: 4px;
-        }
-      }
-    }
-  }
-</style>
