@@ -4,7 +4,7 @@
 	import SiteFooter from '$lib/components/Footer/Footer.svelte';
 
 	const WHATSAPP_NUMBER = '34604561945';
-	const ENDPOINT_URL = '';
+	const ENDPOINT_URL = 'https://g5joqg9b5m.execute-api.eu-north-1.amazonaws.com/default/grandiora_landing_leads';
 
 	let name = $state('');
 	let phone = $state('');
@@ -18,47 +18,46 @@
 		if (p) msg = p;
 	});
 
-	function submit(event: Event) {
-		event.preventDefault();
-		if (!name.trim() || !phone.trim()) {
-			formMsg = 'Please fill in your name and phone.';
-			msgColor = '#c0392b';
-			flash();
-			return;
-		}
+function submit(event: Event) {
+	event.preventDefault();
 
-		const text =
-			'Hello Grandiora! 👋\n' +
-			'Name: ' + name.trim() + '\n' +
-			'Phone: ' + phone.trim() + '\n' +
-			(msg.trim() ? 'Looking for: ' + msg.trim() : '');
-
-		window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank');
-
-		if (ENDPOINT_URL) {
-			try {
-				fetch(ENDPOINT_URL, {
-					method: 'POST',
-					mode: 'no-cors',
-					headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-					body: JSON.stringify({
-						name: name.trim(),
-						phone: phone.trim(),
-						message: msg.trim(),
-						source: 'rental-en'
-					})
-				});
-			} catch (e) {}
-		}
-
-		formMsg = 'Thank you! Your message is on its way — we answer within minutes.';
-		msgColor = '#2f8f4e';
+	if (!name.trim() || !phone.trim()) {
+		formMsg = 'Please fill in your name and phone.';
+		msgColor = '#c0392b';
 		flash();
-
-		name = '';
-		phone = '';
-		msg = '';
+		return;
 	}
+
+	const text =
+		'Hello Grandiora! 👋\n' +
+		'Name: ' + name.trim() + '\n' +
+		'Phone: ' + phone.trim() + '\n' +
+		(msg.trim() ? 'Looking for: ' + msg.trim() : '');
+
+	window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank');
+
+	if (ENDPOINT_URL) {
+		fetch(ENDPOINT_URL, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				name: name.trim(),
+				phone: phone.trim(),
+				email: '',
+				message: msg.trim(),
+				source: 'rental-en'
+			})
+		}).catch((e) => console.error('Lead submit failed:', e));
+	}
+
+	formMsg = 'Thank you! Your message is on its way — we answer within minutes.';
+	msgColor = '#2f8f4e';
+	flash();
+
+	name = '';
+	phone = '';
+	msg = '';
+}
 
 	let timeout: ReturnType<typeof setTimeout>;
 	function flash() {
