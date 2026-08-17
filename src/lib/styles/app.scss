@@ -867,6 +867,8 @@ a.card {
 }
 
 .d-gallery {
+	min-width: 0;
+
 	.d-main {
 		position: relative;
 		border-radius: 12px;
