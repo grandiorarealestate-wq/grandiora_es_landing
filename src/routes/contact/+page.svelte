@@ -3,7 +3,10 @@
 	import Header from '$lib/components/Header/Header.svelte';
 	import SiteFooter from '$lib/components/Footer/Footer.svelte';
 
+	// ── Lead form config ──
 	const WHATSAPP_NUMBER = '34604561945';
+	// AWS Lambda (API Gateway) URL: создаёт лид в CADDIES + шлёт email через SES.
+	// Пусто = только WhatsApp. См. lambda/ и template.yaml.
 	const ENDPOINT_URL = 'https://g5joqg9b5m.execute-api.eu-north-1.amazonaws.com/default/grandiora_landing_leads';
 
 	let name = $state('');
@@ -18,48 +21,50 @@
 		if (p) msg = p;
 	});
 
-function submit(event: Event) {
-	event.preventDefault();
+	function submit(event: Event) {
+		event.preventDefault();
+		if (!name.trim() || !phone.trim()) {
+			formMsg = 'Please fill in your name and phone.';
+			msgColor = '#c0392b';
+			flash();
+			return;
+		}
 
-	if (!name.trim() || !phone.trim()) {
-		formMsg = 'Please fill in your name and phone.';
-		msgColor = '#c0392b';
+		const text =
+			'Hello Grandiora! 👋\n' +
+			'Name: ' + name.trim() + '\n' +
+			'Phone: ' + phone.trim() + '\n' +
+			(msg.trim() ? 'Looking for: ' + msg.trim() : '');
+
+		window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank');
+
+		if (ENDPOINT_URL) {
+			try {
+				fetch(ENDPOINT_URL, {
+					method: 'POST',
+					mode: 'no-cors',
+					headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+					body: JSON.stringify({
+						name: name.trim(),
+						phone: phone.trim(),
+						message: msg.trim(),
+						source: 'rental-en'
+					})
+				});
+			} catch (e) {}
+		}
+
+		formMsg = 'Thank you! Your message is on its way — we answer within minutes.';
+		msgColor = '#2f8f4e';
 		flash();
-		return;
+
+		name = '';
+		phone = '';
+		msg = '';
 	}
 
-	const text =
-		'Hello Grandiora! 👋\n' +
-		'Name: ' + name.trim() + '\n' +
-		'Phone: ' + phone.trim() + '\n' +
-		(msg.trim() ? 'Looking for: ' + msg.trim() : '');
+  let timeout: ReturnType<typeof setTimeout>;
 
-	window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank');
-
-	if (ENDPOINT_URL) {
-		fetch(ENDPOINT_URL, {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({
-				name: name.trim(),
-				phone: phone.trim(),
-				email: '',
-				message: msg.trim(),
-				source: 'rental-en'
-			})
-		}).catch((e) => console.error('Lead submit failed:', e));
-	}
-
-	formMsg = 'Thank you! Your message is on its way — we answer within minutes.';
-	msgColor = '#2f8f4e';
-	flash();
-
-	name = '';
-	phone = '';
-	msg = '';
-}
-
-	let timeout: ReturnType<typeof setTimeout>;
 	function flash() {
 		clearTimeout(timeout);
 		timeout = setTimeout(() => (formMsg = ''), 8000);
@@ -70,7 +75,7 @@ function submit(event: Event) {
 	<title>Contact Us — Grandiora</title>
 	<meta
 		name="description"
-		content="Contact Grandiora Real Estate. We answer within minutes. Luxury villas and apartments for long-term rent in Maresme and Barcelona."
+		content="Contact Grandiora Real Estate. We answer within minutes. Luxury villas and apartments for rent in Maresme and Barcelona."
 	/>
 </svelte:head>
 
@@ -78,7 +83,7 @@ function submit(event: Event) {
 
 <div class="hero">
 	<div class="wrap">
-		<div class="kick">Long-term Luxury Rental · Maresme</div>
+		<div class="kick">Luxury Rental · Maresme</div>
 		<div class="rule"></div>
 		<h1>Contact <span>Us</span></h1>
 		<p>Leave your details — we answer within minutes with everything you need.</p>

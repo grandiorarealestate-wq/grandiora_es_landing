@@ -1,5 +1,5 @@
 <script>
-	import { PHONE_MAIN, PHONE_MAIN_LINK } from '$lib/assets/data.js';
+	import { PHONE_MAIN, PHONE_MAIN_LINK } from '$lib/assets/data';
 
 	let { back = false } = $props();
 </script>
