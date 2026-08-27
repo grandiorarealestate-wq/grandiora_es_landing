@@ -54,6 +54,11 @@
 			} catch (e) {}
 		}
 
+		// Событие конверсии для Google Ads / GA4 — срабатывает после успешной отправки формы
+		if (window.dataLayer) {
+			window.dataLayer.push({ event: 'generate_lead' });
+		}
+
 		formMsg = 'Thank you! Your message is on its way — we answer within minutes.';
 		msgColor = '#2f8f4e';
 		flash();
