@@ -2,7 +2,7 @@
 export const PHONE_MAIN = '+34 930 474 510';
 export const PHONE_MAIN_LINK = 'tel:+34930474510';
 export const WHATSAPP = 'https://wa.me/34604561945';
-export const TELEGRAM = 'https://t.me/+34604561945';
+export const TELEGRAM = 'https://t.me/+34623429491';
 export const EMAIL = 'info@grandiora.es';
 
 export const properties = [
