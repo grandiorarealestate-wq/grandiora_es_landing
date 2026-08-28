@@ -12,20 +12,15 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="%sveltekit.assets%/reset.css" />
-		<!-- Google Tag Manager -->
+		<!-- Google tag (gtag.js) — Grandiora Landing (отдельная GA4) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-41WZVW3LTB"></script>
 		<script>
-			(function (w, d, s, l, i) {
-				w[l] = w[l] || [];
-				w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-				var f = d.getElementsByTagName(s)[0],
-					j = d.createElement(s),
-					dl = l != 'dataLayer' ? '&l=' + l : '';
-				j.async = true;
-				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-				f.parentNode.insertBefore(j, f);
-			})(window, document, 'script', 'dataLayer', 'GTM-NJ476GMB');
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-41WZVW3LTB');
 		</script>
-		<!-- End Google Tag Manager -->
+		<!-- End Google tag -->
 		<style>
 			body {
 				font-family: 'Poppins', sans-serif;
@@ -34,15 +29,7 @@
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<!-- Google Tag Manager (noscript) -->
-		<noscript
-			><iframe
-				src="https://www.googletagmanager.com/ns.html?id=GTM-NJ476GMB"
-				height="0"
-				width="0"
-				style="display: none; visibility: hidden"
-			></iframe
-		></noscript>
+		<!-- Google tag (noscript) — Grandiora Landing -->
 		<!-- End Google Tag Manager (noscript) -->
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
