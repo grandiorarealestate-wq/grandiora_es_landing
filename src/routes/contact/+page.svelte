@@ -11,6 +11,8 @@
 
 	let name = $state('');
 	let phone = $state('');
+	let city = $state('');
+	let family = $state('');
 	let msg = $state('');
 	let formMsg = $state('');
 	let msgColor = $state('#2f8f4e');
@@ -34,6 +36,8 @@
 			'Hello Grandiora! 👋\n' +
 			'Name: ' + name.trim() + '\n' +
 			'Phone: ' + phone.trim() + '\n' +
+			(city ? 'City: ' + city.trim() + '\n' : '') +
+			(family ? 'Family: ' + family.trim() + '\n' : '') +
 			(msg.trim() ? 'Looking for: ' + msg.trim() : '');
 
 		window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank');
@@ -47,7 +51,7 @@
 					body: JSON.stringify({
 						name: name.trim(),
 						phone: phone.trim(),
-						message: msg.trim(),
+						message: [city.trim(), family.trim(), msg.trim()].filter(Boolean).join(' | '),
 						source: 'rental-en'
 					})
 				});
@@ -67,6 +71,8 @@
 
 		name = '';
 		phone = '';
+		city = '';
+		family = '';
 		msg = '';
 	}
 
@@ -120,6 +126,28 @@
 
 						<label for="phone">Phone / WhatsApp</label>
 						<input id="phone" type="tel" bind:value={phone} placeholder="+34 ..." autocomplete="tel" required />
+
+						<label for="city">City / Area</label>
+						<select id="city" bind:value={city}>
+							<option value="">Select…</option>
+							<option>Barcelona</option>
+							<option>Cabrils</option>
+							<option>Premià de Dalt</option>
+							<option>Sant Andreu de Llavaneres</option>
+							<option>Caldes d'Estrac</option>
+							<option>Alella</option>
+							<option>Other</option>
+						</select>
+
+						<label for="family">Family / Household</label>
+						<select id="family" bind:value={family}>
+							<option value="">Select…</option>
+							<option>Single</option>
+							<option>Couple</option>
+							<option>Couple + children</option>
+							<option>Family with 3+ children</option>
+							<option>Other</option>
+						</select>
 
 						<label for="msg">What are you looking for?</label>
 						<textarea
