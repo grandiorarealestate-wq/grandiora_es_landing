@@ -20,7 +20,7 @@
 	<meta property="og:title" content="Grandiora — Luxury villas for rent in Maresme" />
 	<meta
 		property="og:description"
-		content="Top selection of luxury rental properties for expats & internationals on long stays. 80% off-market. We answer within minutes."
+		content="Top selection of luxury rental properties for expats & internationals on long stays. We answer within minutes."
 	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://grandiorarealestate.com/rental-en/img/villa1.jpg" />
@@ -33,7 +33,7 @@
 		<div class="kick">Luxury Rental · Maresme</div>
 		<div class="rule"></div>
 		<h1>Best luxury villas<br />in Maresme for <span>rent</span></h1>
-		<p>See our top selection of properties — 80% off-market. For expats & internationals on long stays. Request a viewing today.</p>
+		<p>See our top selection of properties, with transparent prices. For expats & internationals on long stays. Request a viewing today.</p>
 		<div class="langs-line">Russian · Ukrainian · Spanish · English</div>
 		<div class="ctas"><a class="btn" href="#top">View properties</a></div>
 	</div>
