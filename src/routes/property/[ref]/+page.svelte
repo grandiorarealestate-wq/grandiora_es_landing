@@ -3,7 +3,7 @@
 	import SiteFooter from '$lib/components/Footer/Footer.svelte';
 	import FloatingContact from '$lib/components/FloatingContact/FloatingContact.svelte';
 	import { PHONE_MAIN, PHONE_MAIN_LINK, WHATSAPP } from '$lib/assets/data';
-	import { untrack } from 'svelte';
+	import { untrack, onMount } from 'svelte';
 
 	let { data } = $props();
 	const p = untrack(() => data.property);
@@ -16,6 +16,20 @@
 	function next() {
 		idx = (idx + 1) % photos.length;
 	}
+
+	onMount(() => {
+		const gtag = typeof window !== 'undefined' ? window.gtag : undefined;
+		const dl = typeof window !== 'undefined' ? window.dataLayer : undefined;
+		const payload = {
+			item_id: p.ref,
+			item_name: p.title,
+			price: p.price,
+			item_category: p.type,
+			location_id: p.loc
+		};
+		if (typeof gtag === 'function') gtag('event', 'view_item', { items: [payload] });
+		else if (dl) dl.push({ event: 'view_item', items: [payload] });
+	});
 </script>
 
 <svelte:head>

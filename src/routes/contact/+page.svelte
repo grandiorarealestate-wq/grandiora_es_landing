@@ -76,6 +76,13 @@
 		msg = '';
 	}
 
+  function trackFormStart() {
+		const gtag = typeof window !== 'undefined' ? window.gtag : undefined;
+		const dl = typeof window !== 'undefined' ? window.dataLayer : undefined;
+		if (typeof gtag === 'function') gtag('event', 'form_start', { form_name: 'rental_contact' });
+		else if (dl) dl.push({ event: 'form_start', form_name: 'rental_contact' });
+	}
+
   let timeout: ReturnType<typeof setTimeout>;
 
 	function flash() {
@@ -120,7 +127,7 @@
 				</div>
 				<div class="form-fields">
 					<h3>Contact us</h3>
-					<form onsubmit={submit} novalidate>
+					<form onsubmit={submit} oninput={trackFormStart} novalidate>
 						<label for="name">Your name</label>
 						<input id="name" type="text" bind:value={name} placeholder="John Smith" autocomplete="name" required />
 
