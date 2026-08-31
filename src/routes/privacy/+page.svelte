@@ -33,8 +33,9 @@
 	<h2>1. Data Controller</h2>
 	<p>
 		Garante Urbana S.L. (Grandiora Real Estate)<br />
-		Email: info@grandiora.es<br />
-		Barcelona, Spain
+		Tax ID (CIF): B22538706<br />
+		Passeig de Gràcia 55, Barcelona, Spain<br />
+		Email: info@grandiora.es
 	</p>
 
 	<h2>2. Purposes, Legal Basis and Data Retention</h2>

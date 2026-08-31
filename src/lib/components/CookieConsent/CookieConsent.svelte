@@ -6,12 +6,6 @@
 	const CLARITY_ID = 'yaxyjdoptr';
 
 	let visible = $state(false);
-	let lang: 'en' | 'es' = 'en';
-
-	function detectLang(): 'en' | 'es' {
-		const nav = typeof navigator !== 'undefined' ? navigator.language || '' : '';
-		return nav.toLowerCase().startsWith('es') ? 'es' : 'en';
-	}
 
 	function loadGa4() {
 		if (typeof window === 'undefined') return;
@@ -53,7 +47,6 @@
 	}
 
 	onMount(() => {
-		lang = detectLang();
 		const saved = localStorage.getItem(STORAGE_KEY);
 		if (saved === 'accepted') {
 			// уже дал согласие ранее — грузим аналитику без баннера
@@ -71,21 +64,14 @@
 	<div class="cookie-banner" role="dialog" aria-label="Cookie consent">
 		<div class="cb-inner">
 			<div class="cb-text">
-				{#if lang === 'es'}
-					<p>
-						Utilizamos cookies para mejorar tu experiencia y analizar el tráfico.
-						Consulta nuestra <a href="/privacy">Política de Privacidad</a>.
-					</p>
-				{:else}
-					<p>
-						We use cookies to improve your experience and analyse traffic.
-						See our <a href="/privacy">Privacy Policy</a>.
-					</p>
-				{/if}
+				<p>
+					We use cookies to improve your experience and analyse traffic. See our
+					<a href="/privacy">Privacy Policy</a>.
+				</p>
 			</div>
 			<div class="cb-actions">
-				<button class="cb-decline" onclick={decline}>{lang === 'es' ? 'Rechazar' : 'Decline'}</button>
-				<button class="cb-accept" onclick={accept}>{lang === 'es' ? 'Aceptar' : 'Accept'}</button>
+				<button class="cb-decline" onclick={decline}>Decline</button>
+				<button class="cb-accept" onclick={accept}>Accept</button>
 			</div>
 		</div>
 	</div>
