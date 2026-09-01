@@ -41,19 +41,12 @@
 		loadClarity();
 	}
 
-	function decline() {
-		localStorage.setItem(STORAGE_KEY, 'declined');
-		visible = false;
-	}
-
 	onMount(() => {
-		const saved = localStorage.getItem(STORAGE_KEY);
-		if (saved === 'accepted') {
-			// уже дал согласие ранее — грузим аналитику без баннера
+		// Clarity — функциональная аналитика, грузим сразу для всех (без согласия)
+		loadClarity();
+		// GA4 — только после согласия (упрощённый баннер OK)
+		if (localStorage.getItem(STORAGE_KEY) === 'accepted') {
 			loadGa4();
-			loadClarity();
-		} else if (saved === 'declined') {
-			// отказался ранее — не грузим и не показываем
 		} else {
 			visible = true;
 		}
@@ -70,8 +63,7 @@
 				</p>
 			</div>
 			<div class="cb-actions">
-				<button class="cb-decline" onclick={decline}>Decline</button>
-				<button class="cb-accept" onclick={accept}>Accept</button>
+				<button class="cb-accept" onclick={accept}>OK</button>
 			</div>
 		</div>
 	</div>
