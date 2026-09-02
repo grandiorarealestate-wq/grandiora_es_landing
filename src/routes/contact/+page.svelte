@@ -17,10 +17,19 @@
 	let formMsg = $state('');
 	let msgColor = $state('#2f8f4e');
 
+	let gclid = '';
+	let utmSource = '';
+	let utmCampaign = '';
+	let utmMedium = '';
+
 	onMount(() => {
 		const q = new URLSearchParams(window.location.search);
 		const p = q.get('p');
 		if (p) msg = p;
+		gclid = q.get('gclid') || '';
+		utmSource = q.get('utm_source') || '';
+		utmCampaign = q.get('utm_campaign') || '';
+		utmMedium = q.get('utm_medium') || '';
 	});
 
 	function submit(event: Event) {
@@ -32,27 +41,20 @@
 			return;
 		}
 
-		const text =
-			'Hello Grandiora! 👋\n' +
-			'Name: ' + name.trim() + '\n' +
-			'Phone: ' + phone.trim() + '\n' +
-			(city ? 'City: ' + city.trim() + '\n' : '') +
-			(family ? 'Family: ' + family.trim() + '\n' : '') +
-			(msg.trim() ? 'Looking for: ' + msg.trim() : '');
-
-		window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text), '_blank');
-
 		if (ENDPOINT_URL) {
 			try {
 				fetch(ENDPOINT_URL, {
 					method: 'POST',
-					mode: 'no-cors',
-					headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify({
 						name: name.trim(),
 						phone: phone.trim(),
 						message: [city.trim(), family.trim(), msg.trim()].filter(Boolean).join(' | '),
-						source: 'rental-en'
+						source: 'rental-en',
+						gclid,
+						utmSource,
+						utmCampaign,
+						utmMedium
 					})
 				});
 			} catch (e) {}
@@ -164,6 +166,10 @@
 						></textarea>
 
 						<button type="submit">Send message</button>
+					<div class="wa-alt">
+						Or write us on
+						<a href="https://wa.me/{WHATSAPP_NUMBER}" target="_blank" rel="noopener">WhatsApp</a>
+					</div>
 						<div class="form-msg" style="display:{formMsg ? 'block' : 'none'}; color:{msgColor}">
 							{formMsg}
 						</div>
