@@ -182,8 +182,8 @@
 		<div class="label">Call us in your language</div>
 		<div class="list">
 			<!-- <a class="ph" href={TELEGRAM}><div class="lang">🇷🇺 Russian</div><div class="num">+7 9...</div></a> -->
-			<a class="ph" href="tel:+380503686776"><div class="lang">🇺🇦 Ukrainian</div><div class="num">+38 050 368 67 76</div></a>
 			<a class="ph" href={PHONE_MAIN_LINK}><div class="lang">🇪🇸 Español</div><div class="num">{PHONE_MAIN}</div></a>
+			<a class="ph" href="tel:+380503686776"><div class="lang">🇺🇦 Ukrainian</div><div class="num">+38 050 368 67 76</div></a>
 			<!-- <a class="ph" href={PHONE_MAIN_LINK}><div class="lang">🇺🇸 English (US)</div><div class="num">+1 ...</div></a> -->
 		</div>
 	</div>
