@@ -474,6 +474,77 @@ h2.sec {
 	}
 }
 
+// ===== Lead magnet =====
+.leadmagnet {
+	background: $gold;
+	border-radius: 12px;
+	padding: clamp(26px, 5vw, 38px) clamp(18px, 4vw, 28px);
+	text-align: center;
+
+	h3 {
+		color: $black;
+		font-size: clamp(20px, 4.5vw, 24px);
+		margin-bottom: 8px;
+	}
+
+	p {
+		color: #4a3d24;
+		font-size: 14px;
+		font-weight: 300;
+		margin: 0 auto 18px;
+		max-width: 520px;
+	}
+
+	form {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		justify-content: center;
+		max-width: 640px;
+		margin: 0 auto;
+
+		input {
+			flex: 1 1 200px;
+		padding: 12px 14px;
+		border-radius: 8px;
+		border: 1px solid rgba(0,0,0,0.12);
+		font-size: 14px;
+		font-family: inherit;
+		background: #fff;
+		color: $black;
+
+		&::placeholder {
+			color: #999;
+		}
+	}
+
+	.btn {
+		flex-shrink: 0;
+		background: $black;
+		color: #fff;
+		border: none;
+		padding: 12px 22px;
+		border-radius: 8px;
+		font-size: 14px;
+		font-weight: 600;
+		cursor: pointer;
+		font-family: inherit;
+
+		&:hover {
+			opacity: 0.9;
+		}
+	}
+
+	.lead-msg,
+	.lead-ok {
+		margin-top: 12px;
+		font-size: 13px;
+		font-weight: 500;
+		color: $black;
+	}
+}
+}
+
 // ===== Reviews =====
 .reviews {
 	text-align: center;

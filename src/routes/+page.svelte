@@ -9,6 +9,37 @@
 	function showMore() {
 		visible += 9;
 	}
+
+	// Lead magnet — checklist
+	const ENDPOINT_URL = 'https://g5joqg9b5m.execute-api.eu-north-1.amazonaws.com/default/grandiora_landing_leads';
+	let leadName = $state('');
+	let leadContact = $state('');
+	let leadMsg = $state('');
+	let leadOk = $state(false);
+
+	function requestChecklist(event) {
+		event.preventDefault();
+		if (!leadName.trim() || !leadContact.trim()) {
+			leadMsg = 'Введите имя и email/номер.';
+			leadOk = false;
+			return;
+		}
+		try {
+			fetch(ENDPOINT_URL, {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({
+					name: leadName.trim(),
+					phone: leadContact.trim(),
+					message: 'Запросил чек-лист (lead magnet)',
+					source: 'rental-en'
+				})
+			});
+		} catch (e) {}
+		leadOk = true;
+		leadMsg = '';
+		window.open('/checklist.pdf', '_blank');
+	}
 </script>
 
 <svelte:head>
@@ -98,6 +129,20 @@
 		<div class="rev-more">
 			<a class="btn" href="https://maps.app.goo.gl/FJBSBULG3MohFQcs7" target="_blank" rel="noopener">Read all reviews on Google</a>
 		</div>
+	</div>
+</div>
+
+<div class="wrap" style="margin-top:26px">
+	<div class="leadmagnet">
+		<h3>Бесплатный чек-лист: аренда в Испании без потери залога</h3>
+		<p>10 пунктов, которые спасут вас от лишних трат и проблем при аренде.</p>
+		<form onsubmit={requestChecklist} novalidate>
+			<input type="text" bind:value={leadName} placeholder="Ваше имя" />
+			<input type="text" bind:value={leadContact} placeholder="Email или номер WhatsApp" />
+			<button class="btn" type="submit">Получить чек-лист бесплатно</button>
+		</form>
+		{#if leadMsg}<div class="lead-msg">{leadMsg}</div>{/if}
+		{#if leadOk}<div class="lead-ok">Чек-лист открывается в новой вкладке. Удачи! ✅</div>{/if}
 	</div>
 </div>
 
