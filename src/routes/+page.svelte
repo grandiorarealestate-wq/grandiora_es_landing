@@ -61,6 +61,46 @@
 	{/if}
 </div>
 
+<div class="wrap reviews-sec" style="margin-top:26px">
+	<div class="reviews">
+		<h2 class="sec">What our <span>clients</span> say</h2>
+		<div class="rev-rating">
+			<span class="stars">★★★★★</span>
+			<span class="rev-note">Rated on Google · Real client reviews</span>
+		</div>
+		<div class="rev-grid">
+			<div class="rev-card">
+				<div class="rev-stars">★★★★★</div>
+				<p>«The purchase process in Alella was organised very well, with great care in all communications. You can clearly see a high-class agency in Barcelona with deep knowledge of the Maresme region. Every property matched our requirements — no delays, everything fast and transparent.»</p>
+				<div class="rev-name">Omar Mesa Garcia</div>
+			</div>
+			<div class="rev-card">
+				<div class="rev-stars">★★★★★</div>
+				<p>«Excellent understanding of the market and real experience in Barcelona. They immediately pointed out risks that other agencies preferred to keep quiet about. Special respect for that.»</p>
+				<div class="rev-name">Alis Yakimenko</div>
+			</div>
+			<div class="rev-card">
+				<div class="rev-stars">★★★★★</div>
+				<p>«Daniela is a wonderful person and a very professional agent at Grandiora Real Estate. I highly recommend her — her services are excellent.»</p>
+				<div class="rev-name">Verified client</div>
+			</div>
+			<div class="rev-card">
+				<div class="rev-stars">★★★★★</div>
+				<p>«On 28 July 2026 we signed the purchase agreement for our house in Alella. Throughout the whole process we were helped and kept informed by their agent Emanuela — professional, efficient and tactful. Five stars to Grandiora and Emanuela.»</p>
+				<div class="rev-name">Client · Alella</div>
+			</div>
+			<div class="rev-card">
+				<div class="rev-stars">★★★★★</div>
+				<p>«Emanuela is simply amazing. She understands what we're looking for and has a great eye for beautiful homes. She made the whole process simple and transparent, and even worked with our mortgage broker to make it easier. 10/10, highly recommend!»</p>
+				<div class="rev-name">Verified client</div>
+			</div>
+		</div>
+		<div class="rev-more">
+			<a class="btn" href="https://maps.app.goo.gl/FJBSBULG3MohFQcs7" target="_blank" rel="noopener">Read all reviews on Google</a>
+		</div>
+	</div>
+</div>
+
 <div class="wrap" style="margin-top:26px">
 	<div class="offmarket">
 		<h3>Can't find what you're looking for?</h3>

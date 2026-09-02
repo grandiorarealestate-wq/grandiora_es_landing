@@ -474,6 +474,76 @@ h2.sec {
 	}
 }
 
+// ===== Reviews =====
+.reviews {
+	text-align: center;
+
+	.rev-rating {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		margin: -6px 0 22px;
+
+		.stars {
+			color: $gold;
+			font-size: 20px;
+			letter-spacing: 2px;
+		}
+		.rev-note {
+			font-size: 12px;
+			color: $muted;
+			font-weight: 300;
+		}
+	}
+
+	.rev-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		gap: 14px;
+		text-align: left;
+	}
+
+	.rev-card {
+		background: #fff;
+		border: 1px solid $line;
+		border-radius: 10px;
+		padding: 18px 18px 16px;
+		display: flex;
+		flex-direction: column;
+
+		.rev-stars {
+			color: $gold;
+			font-size: 15px;
+			letter-spacing: 1px;
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-size: 13px;
+			line-height: 1.55;
+			color: #3a3a3a;
+			font-weight: 300;
+			flex: 1;
+			margin: 0 0 12px;
+		}
+
+		.rev-name {
+			font-size: 12px;
+			font-weight: 600;
+			color: $black;
+		}
+	}
+
+	.rev-more {
+		margin-top: 20px;
+
+		.btn {
+			display: inline-block;
+		}
+	}
+}
+
 // ===== Manager =====
 .manager {
 	display: flex;
