@@ -11,4 +11,28 @@
 </div>
 <footer>
 	<div class="wrap">GRANDIORA · grandiorarealestate.com</div>
+	<div class="wrap guide-links">
+		<a href="/guide/rent-villa-barcelona">How to rent a villa in Barcelona</a>
+		<span>·</span>
+		<a href="/guide/best-areas-maresme">Best areas for expats in Maresme</a>
+	</div>
 </footer>
+
+<style>
+	.guide-links {
+		margin-top: 10px;
+		font-size: 13px;
+		color: #888;
+		display: flex;
+		gap: 10px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.guide-links a {
+		color: #b8924f;
+		text-decoration: none;
+	}
+	.guide-links a:hover {
+		text-decoration: underline;
+	}
+</style>
