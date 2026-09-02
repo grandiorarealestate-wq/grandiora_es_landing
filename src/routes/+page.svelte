@@ -20,7 +20,7 @@
 	function requestChecklist(event) {
 		event.preventDefault();
 		if (!leadName.trim() || !leadContact.trim()) {
-			leadMsg = 'Введите имя и email/номер.';
+			leadMsg = 'Enter your name and email/phone.';
 			leadOk = false;
 			return;
 		}
@@ -31,7 +31,7 @@
 				body: JSON.stringify({
 					name: leadName.trim(),
 					phone: leadContact.trim(),
-					message: 'Запросил чек-лист (lead magnet)',
+					message: 'Requested checklist (lead magnet)',
 					source: 'rental-en'
 				})
 			});
@@ -134,15 +134,15 @@
 
 <div class="wrap" style="margin-top:26px">
 	<div class="leadmagnet">
-		<h3>Бесплатный чек-лист: аренда в Испании без потери залога</h3>
-		<p>10 пунктов, которые спасут вас от лишних трат и проблем при аренде.</p>
+		<h3>Free checklist: rent in Spain without losing your deposit</h3>
+		<p>10 points that save you from extra costs and headaches when renting.</p>
 		<form onsubmit={requestChecklist} novalidate>
-			<input type="text" bind:value={leadName} placeholder="Ваше имя" />
-			<input type="text" bind:value={leadContact} placeholder="Email или номер WhatsApp" />
-			<button class="btn" type="submit">Получить чек-лист бесплатно</button>
+			<input type="text" bind:value={leadName} placeholder="Your name" />
+			<input type="text" bind:value={leadContact} placeholder="Email or WhatsApp number" />
+			<button class="btn" type="submit">Get the free checklist</button>
 		</form>
 		{#if leadMsg}<div class="lead-msg">{leadMsg}</div>{/if}
-		{#if leadOk}<div class="lead-ok">Чек-лист открывается в новой вкладке. Удачи! ✅</div>{/if}
+		{#if leadOk}<div class="lead-ok">Your checklist is opening in a new tab. Good luck! ✅</div>{/if}
 	</div>
 </div>
 
