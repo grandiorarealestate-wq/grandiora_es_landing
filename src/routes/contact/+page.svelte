@@ -63,6 +63,8 @@
 		// Событие конверсии для Google Ads / GA4 — срабатывает после успешной отправки формы
 		if (typeof window.gtag === 'function') {
 			window.gtag('event', 'generate_lead');
+			// Google Ads conversion (WEBPAGE action)
+			window.gtag('event', 'conversion', { send_to: 'AW-17552999108/7743873281' });
 		} else if (window.dataLayer) {
 			window.dataLayer.push({ event: 'generate_lead' });
 		}

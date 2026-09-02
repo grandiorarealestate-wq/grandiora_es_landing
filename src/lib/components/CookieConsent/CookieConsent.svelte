@@ -22,6 +22,8 @@
 		};
 		(window as any).gtag('js', new Date());
 		(window as any).gtag('config', GA4_ID);
+		// Google Ads (conversion tracking)
+		(window as any).gtag('config', 'AW-17552999108');
 	}
 
 	function loadClarity() {
