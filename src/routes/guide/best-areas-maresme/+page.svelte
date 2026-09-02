@@ -70,6 +70,11 @@
 		<li><strong>Lifestyle</strong> — beach town, golf, or pure privacy?</li>
 	</ul>
 	<p>The answer usually narrows it down to one or two towns immediately.</p>
+	<p>
+		Once you've picked your area, the next step is renting. Read our guide on
+		<a href="/guide/rent-villa-barcelona">how to rent a villa in Barcelona</a> — documents,
+		budget, lease terms, and how to move fast on a good property.
+	</p>
 
 	<div class="cta-box">
 		<h3>Let us match you to the right area</h3>

@@ -13,6 +13,7 @@
 		{:else}
 			<div class="header-cta">
 				<a class="tel-link" href={PHONE_MAIN_LINK}>{PHONE_MAIN}</a>
+				<a class="guide-link" href="/guide/rent-villa-barcelona">Guides</a>
 				<a class="btn" href="/contact">Contact us</a>
 			</div>
 		{/if}
