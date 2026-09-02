@@ -28,10 +28,18 @@
 		if (typeof window === 'undefined') return;
 		if ((window as any).__grandiora_clarity_loaded) return;
 		(window as any).__grandiora_clarity_loaded = true;
-		const s = document.createElement('script');
+		// Канонический сниппет Clarity: сначала создаём глобальную функцию window.clarity
+		// (очередь), затем грузим loader clarity.ms/tag/<id>. Без функции-очереди loader
+		// падает на первом же вызове window.clarity(...) → Clarity не инициализируется.
+		const w = window as any;
+		const a = 'clarity';
+		const r = 'script';
+		w[a] = w[a] || function () { (w[a].q = w[a].q || []).push(arguments); };
+		const s = document.createElement(r);
 		s.async = true;
 		s.src = `https://www.clarity.ms/tag/${CLARITY_ID}`;
-		document.head.appendChild(s);
+		const y = document.getElementsByTagName(r)[0];
+		y.parentNode.insertBefore(s, y);
 	}
 
 	function accept() {
