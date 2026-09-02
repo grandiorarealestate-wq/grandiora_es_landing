@@ -65,7 +65,7 @@
 		<div class="rule"></div>
 		<h1>Best luxury villas<br />in Maresme for <span>rent</span></h1>
 		<p>See our top selection of properties, with transparent prices. For expats & internationals on long stays. Request a viewing today.</p>
-		<div class="langs-line">Russian · Ukrainian · Spanish · English</div>
+		<div class="langs-line">Spanish · English · Russian · Ukrainian</div>
 		<div class="ctas"><a class="btn" href="#top">View properties</a></div>
 	</div>
 </div>

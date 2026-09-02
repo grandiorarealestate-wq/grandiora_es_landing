@@ -122,10 +122,10 @@
 					<div class="mava">A</div>
 					<h4>Anastasia</h4>
 					<ul class="langs">
-						<li>Russian</li>
-						<li>Ukrainian</li>
 						<li>Spanish</li>
 						<li>English</li>
+						<li>Russian</li>
+						<li>Ukrainian</li>
 					</ul>
 					<div class="side-note">WhatsApp · Telegram · Phone</div>
 				</div>
