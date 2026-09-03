@@ -31,6 +31,45 @@
 	let leadMsg = $state('');
 	let leadOk = $state(false);
 
+	// Hero lead capture (name + WhatsApp) — primary CTA
+	let heroName = $state('');
+	let heroContact = $state('');
+	let heroMsg = $state('');
+	let heroOk = $state(false);
+
+	function submitHero(event) {
+		event.preventDefault();
+		if (!heroName.trim() || !heroContact.trim()) {
+			heroMsg = 'Enter your name and WhatsApp number.';
+			heroOk = false;
+			return;
+		}
+		try {
+			fetch(ENDPOINT_URL, {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({
+					name: heroName.trim(),
+					phone: heroContact.trim(),
+					message: 'Hero form — requested off-market list',
+					source: 'rental-en',
+					gclid,
+					utmSource,
+					utmCampaign,
+					utmMedium
+				})
+			});
+		} catch (e) {}
+		if (typeof window.gtag === 'function') {
+			window.gtag('event', 'generate_lead');
+			window.gtag('event', 'conversion', { send_to: 'AW-17552999108/7743873281' });
+		} else if (window.dataLayer) {
+			window.dataLayer.push({ event: 'generate_lead' });
+		}
+		heroOk = true;
+		heroMsg = '';
+	}
+
 	function requestChecklist(event) {
 		event.preventDefault();
 		if (!leadName.trim() || !leadContact.trim()) {
@@ -93,10 +132,16 @@
 		<h1>Luxury villa <em>rentals</em>. Maresme &amp; Barcelona</h1>
 		<p>Exclusive villas and apartments for rent, with the utmost hospitality.</p>
 		<div class="hero-trust"><span>Verified homes</span> · Flexible stays · Turnkey</div>
-		<div class="cta">
-			<a class="btn" href="#top">View rental properties</a>
-		</div>
-		<div class="cat-note">Rental catalogue · Maresme · Barcelona</div>
+
+		<form class="hero-form" onsubmit={submitHero} novalidate>
+			<input type="text" bind:value={heroName} placeholder="Your name" autocomplete="name" />
+			<input type="tel" bind:value={heroContact} placeholder="WhatsApp / phone" autocomplete="tel" />
+			<button class="btn" type="submit">Get the off-market list</button>
+		</form>
+		{#if heroMsg}<div class="hero-msg">{heroMsg}</div>{/if}
+		{#if heroOk}<div class="hero-msg ok">Thanks! We'll contact you within minutes. ✅</div>{/if}
+
+		<div class="cat-note"><a href="#top">Browse rental properties ↓</a> · Maresme · Barcelona</div>
 	</div>
 </div>
 
@@ -284,6 +329,42 @@
 		margin: 0 auto;
 		border-radius: 40px;
 		padding: 16px 30px;
+	}
+
+	/* Hero lead capture form */
+	.hero-form {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		max-width: 420px;
+		margin: 0 auto 14px;
+	}
+	.hero-form input {
+		padding: 14px 18px;
+		border: 1px solid #dcd3bf;
+		border-radius: 40px;
+		font-size: 15px;
+		background: #fff;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	.hero-form button {
+		border-radius: 40px;
+		padding: 15px 24px;
+		font-size: 15px;
+	}
+	.hero-msg {
+		margin-top: 4px;
+		font-size: 13px;
+		color: #c0392b;
+	}
+	.hero-msg.ok {
+		color: #2f8f4e;
+	}
+	.cat-note a {
+		color: #a9853f;
+		text-decoration: none;
+		font-weight: 600;
 	}
 	.hero-copy .cat-note {
 		margin-top: 14px;
