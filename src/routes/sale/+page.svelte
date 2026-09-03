@@ -3,9 +3,8 @@
 	import SiteFooter from '$lib/components/Footer/Footer.svelte';
 	import FloatingContact from '$lib/components/FloatingContact/FloatingContact.svelte';
 	import PropertyCard from '$lib/components/PropertyCard/PropertyCard.svelte';
-	import { properties, PHONE_MAIN, PHONE_MAIN_LINK, WHATSAPP, TELEGRAM } from '$lib/assets/data';
+	import { saleProperties, PHONE_MAIN, PHONE_MAIN_LINK, WHATSAPP, TELEGRAM } from '$lib/assets/sale';
 
-	// Brand hero image (Maresme villa, sunset) — served from static.
 	const HERO_IMG = '/img/hero_rental.jpg';
 
 	let visible = $state(9);
@@ -13,7 +12,7 @@
 		visible += 9;
 	}
 
-	// Lead form — same Lambda → CADDIES pipeline as the rest of the site.
+	// Lead form — same Lambda → CADDIES pipeline, source 'villas-sale'
 	const ENDPOINT_URL = 'https://g5joqg9b5m.execute-api.eu-north-1.amazonaws.com/default/grandiora_landing_leads';
 	let name = $state('');
 	let phone = $state('');
@@ -38,7 +37,7 @@
 					name: name.trim(),
 					phone: phone.trim(),
 					message: [city.trim(), family.trim(), msg.trim()].filter(Boolean).join(' | '),
-					source: 'villas-maresme'
+					source: 'villas-sale'
 				})
 			});
 		} catch (e) {}
@@ -59,46 +58,53 @@
 </script>
 
 <svelte:head>
-	<title>Luxury Villa Rentals — Maresme & Barcelona | Grandiora</title>
+	<title>Luxury Villas for Sale — Barcelona & Maresme | Grandiora</title>
 	<meta
 		name="description"
-		content="Exclusive villas and apartments for rent in Maresme and Barcelona, with the utmost hospitality. Verified homes, flexible stays, turnkey service. Grandiora Real Estate."
+		content="Exclusive luxury homes and villas for sale in Barcelona and Maresme. From prime penthouses to private estates — with expert representation and turnkey service. Grandiora Real Estate."
 	/>
-	<meta property="og:title" content="Luxury Villa Rentals — Maresme & Barcelona | Grandiora" />
-	<meta property="og:description" content="Exclusive villas and apartments for rent, with the utmost hospitality. Verified homes, flexible stays, turnkey service." />
+	<meta property="og:title" content="Luxury Villas for Sale — Barcelona & Maresme | Grandiora" />
+	<meta property="og:description" content="Exclusive luxury homes and villas for sale in Barcelona and Maresme. Expert representation, turnkey service." />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content={HERO_IMG} />
 </svelte:head>
 
 <Header />
 
-<!-- ===== Hero — full-width image, content below (per reference) ===== -->
+<!-- ===== Hero — full-width image, content below ===== -->
 <div class="hero">
 	<div class="hero-media">
 		<img src={HERO_IMG} alt="Luxury villa with pool in Maresme, Barcelona" />
 	</div>
 	<div class="hero-copy">
-		<div class="eyebrow">Rentals · Barcelona · Maresme</div>
-		<h1>Luxury villa <em>rentals</em>. Maresme &amp; Barcelona</h1>
-		<p>Exclusive villas and apartments for rent, with the utmost hospitality.</p>
-		<div class="trust"><span>Verified homes</span> · Flexible stays · Turnkey</div>
+		<div class="eyebrow">For sale · Barcelona · Maresme</div>
+		<h1>Luxury homes <em>for sale</em>. Barcelona &amp; Maresme</h1>
+		<p>Exclusive penthouses, villas and estates — with expert representation and turnkey service.</p>
+		<div class="hero-trust"><span>Prime locations</span> · Expert negotiation · Turnkey</div>
 		<div class="cta">
-			<a class="btn" href="#catalogue">View rental properties</a>
+			<a class="btn" href="#catalogue">View homes for sale</a>
 		</div>
-		<div class="cat-note">Rental catalogue · Maresme · Barcelona</div>
-		<div class="cross"><a href="/sale">Looking to buy? View homes for sale →</a></div>
+		<div class="cat-note">Sale catalogue · Barcelona · Maresme</div>
+	</div>
+</div>
+
+<!-- ===== Cross-link to rentals ===== -->
+<div class="cross">
+	<div class="cross-in">
+		<span>Looking to rent instead?</span>
+		<a class="clink" href="/villas-maresme">View luxury rentals →</a>
 	</div>
 </div>
 
 <!-- ===== Catalogue ===== -->
 <div class="wrap" id="catalogue">
-	<h2 class="sec">Our <span>gems</span></h2>
+	<h2 class="sec">Featured <span>homes</span></h2>
 	<div class="grid">
-		{#each properties.slice(0, visible) as p (p.ref)}
+		{#each saleProperties.slice(0, visible) as p (p.ref)}
 			<PropertyCard {p} />
 		{/each}
 	</div>
-	{#if visible < properties.length}
+	{#if visible < saleProperties.length}
 		<div class="show-more">
 			<button class="btn" onclick={showMore}>Show more</button>
 		</div>
@@ -119,11 +125,11 @@
 				<select bind:value={city}>
 					<option value="">City / Area…</option>
 					<option>Barcelona</option>
-					<option>Cabrils</option>
-					<option>Premià de Dalt</option>
-					<option>Sant Andreu de Llavaneres</option>
-					<option>Caldes d'Estrac</option>
 					<option>Alella</option>
+					<option>Cabrils</option>
+					<option>Cabrera de Mar</option>
+					<option>Sant Andreu de Llavaneres</option>
+					<option>Cardedeu</option>
 					<option>Other</option>
 				</select>
 				<select bind:value={family}>
@@ -132,6 +138,7 @@
 					<option>Couple</option>
 					<option>Couple + children</option>
 					<option>Family 3+</option>
+					<option>Investor</option>
 					<option>Other</option>
 				</select>
 			</div>
@@ -156,7 +163,7 @@
 <FloatingContact />
 
 <style>
-	/* ===== Hero — full-width image, content below (per reference) ===== */
+	/* ===== Hero (light luxury, full-width image, content below) ===== */
 	.hero {
 		background: #f7f5f0;
 		border-bottom: 1px solid #e7ddc7;
@@ -174,7 +181,7 @@
 		max-width: 760px;
 		margin: 0 auto;
 	}
-	.hero-copy .eyebrow {
+	.eyebrow {
 		font-size: 11px;
 		letter-spacing: 5px;
 		color: #a9853f;
@@ -182,159 +189,91 @@
 		font-weight: 700;
 		margin-bottom: 16px;
 	}
-	.hero-copy h1 {
+	h1 {
 		font-size: clamp(28px, 5.5vw, 44px);
 		line-height: 1.12;
 		letter-spacing: -0.3px;
 		margin-bottom: 16px;
 	}
-	.hero-copy h1 em {
-		color: #a9853f;
-		font-style: italic;
-	}
-	.hero-copy p {
+	h1 em { color: #a9853f; font-style: italic; }
+	p {
 		color: #6b6b6b;
 		font-size: 16px;
 		font-weight: 300;
 		margin-bottom: 18px;
 	}
-	.hero-copy .trust {
+	.hero-trust {
 		font-size: 11px;
 		letter-spacing: 1.5px;
 		color: #6b6b6b;
 		text-transform: uppercase;
 		margin-bottom: 24px;
 	}
-	.hero-copy .trust span {
-		color: #a9853f;
-		font-weight: 700;
-	}
-	.hero-copy .cta a {
+	.hero-trust span { color: #a9853f; font-weight: 700; }
+	.cta a {
 		display: block;
 		max-width: 460px;
 		margin: 0 auto;
 		border-radius: 40px;
 		padding: 16px 30px;
 	}
-	.hero-copy .cat-note {
+	.cat-note {
 		margin-top: 14px;
 		color: #a3a099;
 		font-size: 11px;
 		letter-spacing: .5px;
 	}
-	.hero-copy .cross {
-		margin-top: 10px;
-	}
-	.hero-copy .cross a {
-		color: #a9853f;
-		font-weight: 700;
-		font-size: 13px;
-		text-decoration: none;
-	}
-	.hero-copy .cross a:hover { text-decoration: underline; }
 
-	/* ===== Catalogue ===== */
-	.wrap {
+	/* ===== Cross-link strip ===== */
+	.cross {
+		background: #fff;
+		border-bottom: 1px solid #e7ddc7;
+	}
+	.cross-in {
 		max-width: 1160px;
 		margin: 0 auto;
-		padding: 0 clamp(16px, 4vw, 26px);
+		padding: 16px clamp(16px, 4vw, 26px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 14px;
+		flex-wrap: wrap;
+		font-size: 14px;
+		color: #6b6b6b;
 	}
-	#catalogue {
-		padding-top: 36px;
-		padding-bottom: 12px;
-	}
-	.sec {
-		font-size: clamp(24px, 4vw, 32px);
-		margin-bottom: 20px;
-	}
-	.sec span {
+	.clink {
 		color: #a9853f;
-		font-style: italic;
+		font-weight: 700;
+		text-decoration: none;
 	}
-	.grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 22px;
-	}
-	@media (max-width: 860px) {
-		.grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-	@media (max-width: 560px) {
-		.grid {
-			grid-template-columns: 1fr;
-		}
-	}
-	.show-more {
-		text-align: center;
-		margin: 24px 0;
-	}
+	.clink:hover { text-decoration: underline; }
+
+	/* ===== Catalogue ===== */
+	.wrap { max-width: 1160px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 26px); }
+	#catalogue { padding-top: 36px; padding-bottom: 12px; }
+	.sec { font-size: clamp(24px, 4vw, 32px); margin-bottom: 20px; }
+	.sec span { color: #a9853f; font-style: italic; }
+	.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+	@media (max-width: 860px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+	@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+	.show-more { text-align: center; margin: 24px 0; }
 
 	/* ===== Lead form ===== */
-	.lead-sec {
-		padding-top: 28px;
-		padding-bottom: 8px;
+	.lead-sec { padding-top: 28px; padding-bottom: 8px; }
+	.lead { background: #f7f5f0; border: 1px solid #e7ddc7; border-radius: 6px; padding: 28px; }
+	.lead h3 { font-size: 24px; margin-bottom: 6px; }
+	.lead p { color: #6b6b6b; margin-bottom: 18px; }
+	.lead .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+	.lead input, .lead select, .lead textarea {
+		width: 100%; padding: 12px 14px; border: 1px solid #e7ddc7; border-radius: 6px;
+		font-family: inherit; font-size: 15px; background: #fff; color: #202221;
 	}
-	.lead {
-		background: #f7f5f0;
-		border: 1px solid #e7ddc7;
-		border-radius: 6px;
-		padding: 28px;
-	}
-	.lead h3 {
-		font-size: 24px;
-		margin-bottom: 6px;
-	}
-	.lead p {
-		color: #6b6b6b;
-		margin-bottom: 18px;
-	}
-	.lead .row {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 12px;
-		margin-bottom: 12px;
-	}
-	.lead input,
-	.lead select,
-	.lead textarea {
-		width: 100%;
-		padding: 12px 14px;
-		border: 1px solid #e7ddc7;
-		border-radius: 6px;
-		font-family: inherit;
-		font-size: 15px;
-		background: #fff;
-		color: #202221;
-	}
-	.lead textarea {
-		min-height: 80px;
-		resize: vertical;
-		margin-bottom: 14px;
-	}
-	.lead .btn {
-		border-radius: 40px;
-	}
-	.form-msg {
-		margin-top: 12px;
-		font-size: 14px;
-		font-weight: 600;
-	}
-	@media (max-width: 560px) {
-		.lead .row {
-			grid-template-columns: 1fr;
-		}
-	}
+	.lead textarea { min-height: 80px; resize: vertical; margin-bottom: 14px; }
+	.lead .btn { border-radius: 40px; }
+	.form-msg { margin-top: 12px; font-size: 14px; font-weight: 600; }
+	@media (max-width: 560px) { .lead .row { grid-template-columns: 1fr; } }
 
 	/* ===== Final CTA ===== */
-	.final {
-		padding-top: 28px;
-		padding-bottom: 40px;
-	}
-	.fc-row {
-		display: flex;
-		gap: 12px;
-		flex-wrap: wrap;
-	}
+	.final { padding-top: 28px; padding-bottom: 40px; }
+	.fc-row { display: flex; gap: 12px; flex-wrap: wrap; }
 </style>
