@@ -42,6 +42,8 @@
 		} else if (dl) {
 			dl.push({ event: 'generate_lead' });
 		}
+		// Meta Pixel Lead
+		if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
 	}
 </script>
 

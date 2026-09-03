@@ -66,6 +66,8 @@
 		} else if (window.dataLayer) {
 			window.dataLayer.push({ event: 'generate_lead' });
 		}
+		// Meta Pixel Lead
+		if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
 		heroOk = true;
 		heroMsg = '';
 	}
@@ -100,6 +102,8 @@
 		} else if (window.dataLayer) {
 			window.dataLayer.push({ event: 'generate_lead' });
 		}
+		// Meta Pixel Lead
+		if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
 		leadOk = true;
 		leadMsg = '';
 		window.open('/checklist.pdf', '_blank');

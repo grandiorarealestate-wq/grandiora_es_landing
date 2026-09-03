@@ -48,6 +48,8 @@
 		} else if (window.dataLayer) {
 			window.dataLayer.push({ event: 'generate_lead' });
 		}
+		// Meta Pixel Lead
+		if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
 		formMsg = 'Thank you! We answer within minutes.';
 		msgColor = '#2f8f4e';
 		name = '';

@@ -4,8 +4,31 @@
 	const STORAGE_KEY = 'grandiora_cookie_consent';
 	const GA4_ID = 'G-41WZVW3LTB';
 	const CLARITY_ID = 'yaxyjdoptr';
+	const META_PIXEL_ID = '1495796461670945';
 
 	let visible = $state(false);
+
+	function initMetaPixel() {
+		if (typeof window === 'undefined') return;
+		if ((window as any).__grandiora_fbq_loaded) return;
+		(window as any).__grandiora_fbq_loaded = true;
+		// ==== Meta Pixel (ретаргетинг) — инициализируем сразу, грузится всегда ====
+		const w = window as any;
+		w.fbq = w.fbq || function () {
+			w.fbq.callMethod ? w.fbq.callMethod.apply(w.fbq, arguments) : w.fbq.queue.push(arguments);
+		};
+		if (!w._fbq) w._fbq = w.fbq;
+		w.fbq.push = w.fbq;
+		w.fbq.loaded = true;
+		w.fbq.version = '2.0';
+		w.fbq.queue = [];
+		const s = document.createElement('script');
+		s.async = true;
+		s.src = 'https://connect.facebook.net/en_US/fbevents.js';
+		document.head.appendChild(s);
+		w.fbq('init', META_PIXEL_ID);
+		w.fbq('track', 'PageView');
+	}
 
 	function initGtag() {
 		if (typeof window === 'undefined') return;
@@ -67,6 +90,8 @@
 	}
 
 	onMount(() => {
+		// Meta Pixel (ретаргетинг) — грузим сразу, без согласия, чтобы собирать аудиторию
+		initMetaPixel();
 		// GA4 + Google Ads конверсия: инициализируем сразу (Consent Mode v2, default denied)
 		initGtag();
 		// Clarity — функциональная аналитика, грузим сразу для всех без согласия
