@@ -59,14 +59,19 @@
 
 <Header />
 
-<div class="hero">
-	<div class="wrap">
-		<div class="kick">Luxury Rental · Maresme</div>
-		<div class="rule"></div>
-		<h1>Best luxury villas<br />in Maresme for <span>rent</span></h1>
-		<p>See our top selection of properties, with transparent prices. For expats & internationals on long stays. Request a viewing today.</p>
-		<div class="langs-line">Spanish · English · Russian · Ukrainian</div>
-		<div class="ctas"><a class="btn" href="#top">View properties</a></div>
+<div class="hero-lux">
+	<div class="hero-media">
+		<img src="/img/hero_rental.jpg" alt="Luxury villa with pool in Maresme, Barcelona" />
+	</div>
+	<div class="hero-copy">
+		<div class="eyebrow">Rentals · Barcelona · Maresme</div>
+		<h1>Luxury villa <em>rentals</em>. Maresme &amp; Barcelona</h1>
+		<p>Exclusive villas and apartments for rent, with the utmost hospitality.</p>
+		<div class="hero-trust"><span>Verified homes</span> · Flexible stays · Turnkey</div>
+		<div class="cta">
+			<a class="btn" href="#top">View rental properties</a>
+		</div>
+		<div class="cat-note">Rental catalogue · Maresme · Barcelona</div>
 	</div>
 </div>
 
@@ -192,3 +197,73 @@
 
 <SiteFooter />
 <FloatingContact />
+
+<style>
+	/* ===== New hero (light luxury) — scoped, unique class names to avoid app.scss conflicts ===== */
+	.hero-lux {
+		background: #f7f5f0;
+		border-bottom: 1px solid #e7ddc7;
+	}
+	.hero-media img {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		max-height: 520px;
+		object-fit: cover;
+		display: block;
+	}
+	.hero-copy {
+		text-align: center;
+		padding: 32px clamp(16px, 4vw, 26px) 40px;
+		max-width: 760px;
+		margin: 0 auto;
+	}
+	.hero-copy .eyebrow {
+		font-size: 11px;
+		letter-spacing: 5px;
+		color: #a9853f;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-bottom: 16px;
+	}
+	.hero-copy h1 {
+		font-size: clamp(28px, 5.5vw, 44px);
+		line-height: 1.12;
+		letter-spacing: -0.3px;
+		margin-bottom: 16px;
+		font-weight: 400;
+	}
+	.hero-copy h1 em {
+		color: #a9853f;
+		font-style: italic;
+	}
+	.hero-copy p {
+		color: #6b6b6b;
+		font-size: 16px;
+		font-weight: 300;
+		margin-bottom: 18px;
+	}
+	.hero-copy .hero-trust {
+		font-size: 11px;
+		letter-spacing: 1.5px;
+		color: #6b6b6b;
+		text-transform: uppercase;
+		margin-bottom: 24px;
+	}
+	.hero-copy .hero-trust span {
+		color: #a9853f;
+		font-weight: 700;
+	}
+	.hero-copy .cta a {
+		display: block;
+		max-width: 460px;
+		margin: 0 auto;
+		border-radius: 40px;
+		padding: 16px 30px;
+	}
+	.hero-copy .cat-note {
+		margin-top: 14px;
+		color: #a3a099;
+		font-size: 11px;
+		letter-spacing: .5px;
+	}
+</style>
