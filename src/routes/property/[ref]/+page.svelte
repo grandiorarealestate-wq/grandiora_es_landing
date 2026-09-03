@@ -83,7 +83,7 @@
 		<div class="d-price">{p.price}</div>
 		<div class="d-type">{p.type}</div>
 		<h1>{p.title}</h1>
-		<div class="d-loc">📍 {p.loc}</div>
+		<div class="d-loc"><svg class="loc-pin" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#d5b376" stroke="#a9853f" stroke-width="1.2"/><circle cx="12" cy="9" r="2.6" fill="#202221"/></svg>{p.loc}</div>
 		<div class="d-feat">{p.feat}</div>
 
 		{#if p.description}

@@ -373,6 +373,11 @@ h2.sec {
 		color: $muted;
 	}
 
+	.loc-pin {
+		vertical-align: -2px;
+		margin-right: 3px;
+	}
+
 	.feat {
 		font-size: 13px;
 		color: #555;
@@ -1120,6 +1125,11 @@ a.card {
 		font-size: 15px;
 		color: $muted;
 		margin-bottom: 4px;
+	}
+
+	.loc-pin {
+		vertical-align: -2px;
+		margin-right: 3px;
 	}
 
 	.d-feat {
