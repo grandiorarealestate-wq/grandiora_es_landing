@@ -9,7 +9,7 @@ export const saleProperties = [
 	{
 		ref: '1154',
 		title: "Spectacular contemporary house with pool and garden in Pedralbes, Barcelona",
-		price: '€7,900,000',
+		price: '7,900,000 €',
 		type: 'Chalets Independientes',
 		loc: "Barcelona",
 		feat: "5 beds · 5 baths · 1459 m²",
@@ -20,7 +20,7 @@ export const saleProperties = [
 	{
 		ref: '1222',
 		title: "Exclusive Catalan country house in Alella with stunning sea views",
-		price: '€5,800,000',
+		price: '5,800,000 €',
 		type: 'Chalets Independientes',
 		loc: "Tiana",
 		feat: "6 beds · 7 baths · 930 m²",
@@ -31,7 +31,7 @@ export const saleProperties = [
 	{
 		ref: '1088',
 		title: "Spectacular new-build villa with sea views and tennis court in Sant Andreu de Llavaneres",
-		price: '€5,000,000',
+		price: '5,000,000 €',
 		type: 'Chalets Independientes',
 		loc: "Sant Andreu de Llavaneres",
 		feat: "6 beds · 6 baths · 670 m²",
@@ -42,7 +42,7 @@ export const saleProperties = [
 	{
 		ref: '1231',
 		title: "Ultra-luxury villa with 5 suites, pool, lift and sea views in Cabrera de Mar",
-		price: '€4,990,000',
+		price: '4,990,000 €',
 		type: 'Chalets Independientes',
 		loc: "Cabrera de Mar",
 		feat: "7 beds · 6 baths · 600 m²",
@@ -53,7 +53,7 @@ export const saleProperties = [
 	{
 		ref: '1236',
 		title: "Spectacular new-build penthouse with private pool in a prime location, Barcelona",
-		price: '€4,500,000',
+		price: '4,500,000 €',
 		type: 'Pisos',
 		loc: "Barcelona",
 		feat: "3 beds · 3 baths · 166 m²",
@@ -64,7 +64,7 @@ export const saleProperties = [
 	{
 		ref: '1215',
 		title: "Spectacular penthouse on Rambla Catalunya — exclusivity and sophistication in the heart of Barcelona",
-		price: '€4,300,000',
+		price: '4,300,000 €',
 		type: 'Áticos',
 		loc: "Barcelona",
 		feat: "3 beds · 5 baths · 219 m²",
@@ -75,7 +75,7 @@ export const saleProperties = [
 	{
 		ref: '1039',
 		title: "Exclusive renovated residence of 280 m² with separate guest flat",
-		price: '€3,900,000',
+		price: '3,900,000 €',
 		type: 'Pisos',
 		loc: "Barcelona",
 		feat: "4 beds · 5 baths · 280 m²",
@@ -86,7 +86,7 @@ export const saleProperties = [
 	{
 		ref: '1141',
 		title: "Magazine-worthy Catalan masía on 2.7 hectares of land in Alella",
-		price: '€3,700,000',
+		price: '3,700,000 €',
 		type: 'Casas',
 		loc: "Alella",
 		feat: "10 beds · 5 baths · 922 m²",
@@ -97,7 +97,7 @@ export const saleProperties = [
 	{
 		ref: '1190',
 		title: "Exclusive luxury flat in Tres Torres with large terrace",
-		price: '€3,600,000',
+		price: '3,600,000 €',
 		type: 'Pisos',
 		loc: "Barcelona",
 		feat: "4 beds · 5 baths · 295 m²",
@@ -108,7 +108,7 @@ export const saleProperties = [
 	{
 		ref: '1005',
 		title: "Spectacular chalet of 775 m² in Alella with pool and views",
-		price: '€2,800,000',
+		price: '2,800,000 €',
 		type: 'Chalets Independientes',
 		loc: "Alella",
 		feat: "6 beds · 7 baths · 775 m²",
@@ -119,7 +119,7 @@ export const saleProperties = [
 	{
 		ref: '1178',
 		title: "Luxury villa with sea views in Can Teixidó, Alella",
-		price: '€2,500,000',
+		price: '2,500,000 €',
 		type: 'Chalets Independientes',
 		loc: "Alella",
 		feat: "5 beds · 5 baths · 550 m²",
@@ -130,7 +130,7 @@ export const saleProperties = [
 	{
 		ref: '1096',
 		title: "Exclusive sustainable villas with sea views in Sant Andreu de Llavaneres",
-		price: '€2,990,000',
+		price: '2,990,000 €',
 		type: 'Chalets Independientes',
 		loc: "Sant Andreu de Llavaneres",
 		feat: "5 beds · 7 baths · 489 m²",
@@ -141,7 +141,7 @@ export const saleProperties = [
 	{
 		ref: '1105',
 		title: "New-build villa with infinity pool in El Mirador, Sant Andreu de Llavaneres",
-		price: '€2,200,000',
+		price: '2,200,000 €',
 		type: 'Chalets Independientes',
 		loc: "Sant Andreu de Llavaneres",
 		feat: "4 beds · 4 baths · 442 m²",
@@ -152,7 +152,7 @@ export const saleProperties = [
 	{
 		ref: '1164',
 		title: "Luxury villa of over 1,000 m² on a 5,000 m² plot in Cardedeu",
-		price: '€2,950,000',
+		price: '2,950,000 €',
 		type: 'Chalets Independientes',
 		loc: "Cardedeu",
 		feat: "5 beds · 7 baths · 1012 m²",
