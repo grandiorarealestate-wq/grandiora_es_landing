@@ -9,7 +9,7 @@ export const properties = [
 	{
 		ref: '1269',
 		title: "Independent chalet with private pool, gardens and sea views in Sant Vicenç de Montalt",
-		price: '12,000 € /month',
+		price: '€12,000 /month',
 		type: 'Villa',
 		loc: "Sant Vicenç de Montalt",
 		feat: "5 beds · 4 baths · 450 m²",
@@ -20,7 +20,7 @@ export const properties = [
 	{
 		ref: '1203',
 		title: "Luxury villa with pool and 1,700 m² garden in Premià de Dalt",
-		price: '30,000 € /month',
+		price: '€30,000 /month',
 		type: 'Villa',
 		loc: "Premià de Dalt",
 		feat: "5 beds · 5 baths · 453 m²",
@@ -31,7 +31,7 @@ export const properties = [
 {
 		ref: '1262',
 		title: "Furnished 7-bedroom house with pool and multiple terraces in Cabrils",
-		price: '18,000 € /month',
+		price: '€18,000 /month',
 		type: 'Villa',
 		loc: "Cabrils",
 		feat: "7 beds · 8 baths · 928 m²",
@@ -42,7 +42,7 @@ export const properties = [
 	{
 		ref: '1253',
 		title: "Exclusive beachfront ground floor with large private terrace and communal pool",
-		price: '3,900 € /month',
+		price: '€3,900 /month',
 		type: 'Apartment',
 		loc: "Sant Andreu de Llavaneres",
 		feat: "3 beds · 2 baths · 70 m²",
@@ -55,7 +55,7 @@ export const properties = [
 	{
 		ref: '1256',
 		title: "256 m² duplex penthouse with port views in Port Balís, Sant Andreu de Llavaneres",
-		price: '3,500 € /month',
+		price: '€3,500 /month',
 		type: 'Duplex',
 		loc: "Sant Andreu de Llavaneres",
 		feat: "4 beds · 2 baths · 256 m²",
@@ -66,7 +66,7 @@ export const properties = [
 	{
 		ref: '1185',
 		title: "Spectacular modernized 423 m² property with pool and mountain views in Premià de Dalt",
-		price: '3,450 € /month',
+		price: '€3,450 /month',
 		type: 'House',
 		loc: "Premià de Dalt",
 		feat: "5 beds · 4 baths · 423 m²",
