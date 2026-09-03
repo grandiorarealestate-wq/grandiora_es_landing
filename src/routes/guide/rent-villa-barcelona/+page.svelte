@@ -16,70 +16,69 @@
 <div class="wrap article">
 	<h1>How to Rent a Villa in Barcelona: Full Guide for Expats (2026)</h1>
 	<p class="lead">
-		Barcelona is one of Europe's most sought-after cities for expats — but renting a villa here
-		is not like renting an apartment back home. The market is fast, competitive, and has its own
-		rules. This guide walks you through everything you need, from documents to the moment you get
-		the keys.
+		Renting a villa near Barcelona isn't like renting an apartment back home. The market is
+		fast, competitive, and works by its own rules. This guide walks through everything, from the
+		documents you need to the day you get the keys.
 	</p>
 
-	<h2>1. Villa or apartment? Know what you're actually renting</h2>
+	<h2>1. Villa or apartment? Know what you're renting</h2>
 	<p>
-		Most rental stock in central Barcelona is apartments. Villas are a much smaller market,
-		concentrated in the coastal areas north of the city — <strong>Maresme</strong> (Alella, Sant
-		Andreu de Llavaneres, Cabrils, Teià, Sant Vicenç de Montalt). If you want space, a garden and
-		a pool, Maresme is where you should look.
+		Most rental stock in central Barcelona is apartments. Villas are a smaller market,
+		concentrated on the coast north of the city, in <strong>Maresme</strong> (Alella, Sant Andreu
+		de Llavaneres, Cabrils, Teià, Sant Vicenç de Montalt). If you want space, a garden and a
+		pool, that's where to look.
 	</p>
 	<p>
-		<strong>Key point:</strong> make sure the contract says <em>arrendamiento de vivienda
-		habitual</em> (long-term residential lease), not a temporary or tourist lease. Only then do
-		you get full tenant protections.
+		One thing to check: make sure the contract says <em>arrendamiento de vivienda habitual</em>
+		(long-term residential lease), not a temporary or tourist lease. Only the residential lease
+		gives you full tenant protections.
 	</p>
 
-	<h2>2. Documents you'll need before you even start</h2>
+	<h2>2. Documents to have ready</h2>
 	<ul>
 		<li><strong>NIE</strong> (foreigner identification number)</li>
-		<li>Passport / ID</li>
-		<li><strong>Proof of income</strong> (contract, payslips or bank statements)</li>
+		<li>Passport or ID</li>
+		<li><strong>Proof of income</strong>: contract, payslips or bank statements</li>
 		<li>Spanish bank account (often required)</li>
-		<li>A short cover note introducing yourself and your situation</li>
+		<li>A short note introducing yourself and your situation</li>
 	</ul>
 	<p>
-		Landlords in Barcelona can receive 50–80+ inquiries on well-priced properties within 24
-		hours. Being ready to apply <em>immediately</em> is your biggest advantage.
+		Well-priced properties in Barcelona can get 50 to 80+ inquiries within 24 hours. Being ready
+		to apply immediately is your biggest advantage.
 	</p>
 
-	<h2>3. Budget: what you'll pay upfront</h2>
+	<h2>3. What you'll pay upfront</h2>
 	<p>
-		The standard <em>fianza</em> (deposit) is <strong>1 month's rent</strong>. Landlords may ask
-		for up to <strong>2 additional months</strong> as extra guarantee. In practice, budget for:
+		The standard <em>fianza</em> (deposit) is one month's rent. Landlords may also ask for up to
+		two extra months as an additional guarantee. In practice, budget for:
 	</p>
 	<ul>
 		<li>First month's rent</li>
-		<li>1 month deposit</li>
-		<li>Up to 2 months extra guarantee</li>
+		<li>One month deposit</li>
+		<li>Up to two months extra guarantee</li>
 	</ul>
-	<p>That's roughly <strong>3–4 months upfront</strong> before you get the keys.</p>
+	<p>That works out to roughly three to four months upfront before you get the keys.</p>
 
 	<h2>4. Lease length and your rights</h2>
 	<ul>
-		<li>Private individual landlord → right to stay <strong>5 years</strong></li>
-		<li>Company landlord → <strong>7 years</strong></li>
-		<li>You can usually leave after <strong>6 months</strong> with 30 days' notice</li>
+		<li>Private individual landlord: you can stay up to <strong>5 years</strong></li>
+		<li>Company landlord: up to <strong>7 years</strong></li>
+		<li>You can usually leave after 6 months with 30 days' notice</li>
 	</ul>
-	<p>Always check the exit clause before signing.</p>
+	<p>Read the exit clause before you sign. It's the part people skip and regret later.</p>
 
-	<h2>5. The fastest way to find a villa (without the stress)</h2>
+	<h2>5. The fastest way to find a villa</h2>
 	<p>
-		Searching portals (Idealista, Fotocasa, Habitaclia) works, but villas in Maresme are often
-		<strong>off-market</strong> — shared directly through agencies before they hit the portals.
-		That's where a local specialist saves you weeks.
+		Portals like Idealista, Fotocasa and Habitaclia work, but villas in Maresme are often
+		<strong>off-market</strong>, shared directly through agencies before they reach the portals.
+		A local specialist saves you weeks here.
 	</p>
 
 	<div class="cta-box">
 		<h3>Need help finding your villa?</h3>
 		<p>
-			We're Grandiora — a Barcelona-based agency focused on luxury villas and homes in Maresme
-			and the coast. We answer within minutes and share our full off-market portfolio.
+			We're Grandiora, a Barcelona-based agency focused on luxury villas and homes in Maresme
+			and along the coast. We answer within minutes and share our full off-market portfolio.
 		</p>
 		<a class="btn" href="/contact">Get a free shortlist of villas</a>
 		<a class="btn-link" href="/checklist.pdf">Download the free Pre-Signing Checklist</a>

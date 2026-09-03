@@ -16,85 +16,77 @@
 <div class="wrap article">
 	<h1>NIE for Renting in Spain: The No-Nonsense Guide</h1>
 	<p class="lead">
-		If you're moving to Barcelona or the Maresme coast, the NIE will come up within about five
-		minutes of your first property viewing. It's not optional, and it's easier to sort out
-		<em>before</em> you fall in love with a villa than after. Here's what it actually is and how
-		to get one without losing your mind.
+		If you're moving to Barcelona or the Maresme coast, the NIE comes up within about five
+		minutes of your first viewing. You can't skip it, and it's much easier to sort out before you
+		fall for a villa than after. This is what it actually is and how to get one without losing
+		your mind.
 	</p>
 
-	<h2>What is the NIE, in plain English?</h2>
+	<h2>What the NIE actually is</h2>
 	<p>
-		The NIE (<em>Número de Identidad de Extranjero</em>) is just a tax and identification number
-		for foreigners. It's not a residence permit. It doesn't give you the right to live or work
-		here on its own — it's simply the number Spain uses to identify you in any official or
-		financial transaction. Think of it as your Spanish "file number".
+		The NIE (<em>Número de Identidad de Extranjero</em>) is a tax and identification number for
+		foreigners. It is not a residence permit and it doesn't give you the right to live or work
+		here. It's just the number Spain uses to identify you in official and financial matters.
+		Think of it as your Spanish file number.
 	</p>
 	<p>
-		You'll need it for pretty much everything: opening a bank account, signing a rental contract,
-		getting utilities connected, buying a car, paying taxes. Without it, you're stuck at the
-		first hurdle of every process.
+		You'll need it for a bank account, a rental contract, utilities, buying a car, paying taxes.
+		Without it, you get stuck at the first step of almost every process.
 	</p>
 
-	<h2>Do you actually need it to rent?</h2>
-	<p>Short answer: yes, in practice. Here's why.</p>
+	<h2>Do you need it to rent?</h2>
+	<p>In practice, yes. Here's why:</p>
 	<ul>
-		<li><strong>Landlords and agencies ask for it</strong> as standard when you apply.</li>
-		<li><strong>Utilities</strong> (electricity, water, internet) usually can't be put in your
-			name without one.</li>
-		<li><strong>The deposit guarantee and contract</strong> reference it for tax purposes.</li>
+		<li>Landlords and agencies ask for it as standard when you apply.</li>
+		<li>Utilities (electricity, water, internet) usually can't go in your name without one.</li>
+		<li>The deposit and the contract reference it for tax purposes.</li>
 	</ul>
 	<p>
-		Some landlords will technically let you start the process without an NIE while you sort it
-		out, but you'll hit a wall at the utilities stage. Better to have it in hand.
+		Some landlords let you start the process without it while you apply, but you'll hit a wall at
+		the utilities stage. Better to have it in hand before you sign.
 	</p>
 
-	<h2>How do you actually get one?</h2>
+	<h2>How to get one</h2>
 	<p>
-		The process is bureaucratic but doable. Here's the rough route, step by step — and a heads-up
-		that details can shift depending on the police station and the current backlog.
+		It's bureaucratic but doable. Details shift depending on the police station and the current
+		backlog, but this is the usual route:
 	</p>
 	<ol>
-		<li><strong>Get an appointment</strong> (<em>cita previa</em>) at the police station or
-			foreigners' office. In Barcelona these can be scarce, so book early and be ready to
-			check back often.</li>
-		<li><strong>Fill in the EX-15 form</strong> — the official NIE application.</li>
-		<li><strong>Pay the fee</strong> (the <em>tasa</em>, model 790-012). It's a small amount,
-			typically around €10–12, and it changes over time, so check the current rate.</li>
-		<li><strong>Bring your passport</strong> (original plus a copy) and a couple of passport
-			photos.</li>
-		<li><strong>Attend the appointment</strong> and, if all goes well, collect your NIE — often
-			the same day or shortly after.</li>
+		<li>Book an appointment (<em>cita previa</em>) at the police station or foreigners' office. In Barcelona these go fast, so book early and check back often.</li>
+		<li>Fill in the EX-15 form, the official NIE application.</li>
+		<li>Pay the fee (model 790-012). It's small, usually around €10–12, and it changes, so check the current rate.</li>
+		<li>Bring your passport (original and a copy) plus a couple of passport photos.</li>
+		<li>Attend the appointment and collect your NIE, often the same day.</li>
 	</ol>
 	<p>
-		By the way, if you're an EU citizen it's usually a straightforward process. Non-EU citizens
-		may have extra steps or a different office depending on their situation.
+		For EU citizens this is usually straightforward. Non-EU citizens may have extra steps or a
+		different office depending on their situation.
 	</p>
 
-	<h2>One thing people don't expect</h2>
+	<h2>The thing people get wrong</h2>
 	<p>
-		The NIE is not the same as the TIE. The TIE (<em>Tarjeta de Identidad de Extranjero</em>) is
-		the physical card that non-EU residents get when they become residents. The NIE is just the
-		number. You can have an NIE without being a resident — that's the version most renters need.
+		The NIE is not the TIE. The TIE (<em>Tarjeta de Identidad de Extranjero</em>) is the
+		physical card that non-EU residents get when they become residents. The NIE is just the
+		number, and you can have it without being a resident. That's the version most renters need.
 	</p>
 	<p>
-		If you're planning to live here long-term, you'll deal with the TIE separately. For renting a
-		home and setting up your life in the first months, the NIE is the thing that unblocks
-		everything.
+		If you're staying long-term you'll deal with the TIE separately. For renting a home and
+		setting up your life in the first months, the NIE is the thing that unlocks everything else.
 	</p>
 
-	<h2>Why sorting this early saves you money</h2>
+	<h2>Why doing this early saves you money</h2>
 	<p>
-		The Barcelona rental market is fast. A good villa in Maresme can get multiple applications
-		within a day or two. If you're ready to sign immediately — NIE in hand, documents ready —
-		you're dramatically more likely to get the property you want instead of watching it go to
-		someone who was quicker. Landlords love a tenant who shows up prepared.
+		The Barcelona rental market moves fast. A good villa in Maresme can get several applications
+		in a day or two. If you're ready to sign right away (NIE in hand, documents ready), you're
+		far more likely to get the place instead of watching it go to someone quicker. Landlords
+		notice a tenant who shows up prepared.
 	</p>
 
 	<div class="cta-box">
 		<h3>Moving to Barcelona and need help with the whole process?</h3>
 		<p>
-			We help expats find and secure luxury homes across Barcelona and Maresme every week — and
-			we can guide you through what to sort out first so you don't lose a property you love.
+			We help expats find and secure homes across Barcelona and Maresme every week, and we can
+			point you to what to sort out first so you don't lose a property you like.
 		</p>
 		<a class="btn" href="/contact">Talk to us about your move</a>
 		<a class="btn-link" href="/checklist.pdf">Download the free Pre-Signing Checklist</a>

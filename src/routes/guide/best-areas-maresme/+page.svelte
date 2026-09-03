@@ -16,71 +16,64 @@
 <div class="wrap article">
 	<h1>Best Areas for Expats in Maresme: Where to Rent a Luxury Home Near Barcelona</h1>
 	<p class="lead">
-		Barcelona is amazing, but many expats quickly realise they want more space, a garden and a
-		pool — without losing access to the city. That's exactly what <strong>Maresme</strong>, the
-		coastal region just north of Barcelona, offers. Here's a practical guide to the best towns,
-		based on what each one is really like.
+		Barcelona is great until you want a garden, a pool and a bit of quiet. That's when most
+		expats start looking north, to the coast. Maresme is the strip of towns between the city and
+		the sea, and each one has a very different feel. Here's what they're actually like.
 	</p>
 
-	<h2>Why expats choose Maresme over central Barcelona</h2>
+	<h2>Why people trade the city for Maresme</h2>
+	<p>Most of our clients tell us the same thing: they loved central Barcelona, then wanted more room. In Maresme you get a house instead of a flat. Gardens, pools, sea views, streets you can park on.</p>
 	<ul>
-		<li><strong>Space:</strong> villas and houses instead of apartments</li>
-		<li><strong>Lifestyle:</strong> gardens, pools, sea views, quiet streets</li>
-		<li><strong>International schools</strong> in easy reach</li>
-		<li><strong>20–40 minutes to Barcelona</strong> by car or train, depending on the town</li>
+		<li>Villas and houses, not apartments</li>
+		<li>International schools within a short drive</li>
+		<li>20 to 40 minutes to Barcelona, depending on the town</li>
 	</ul>
-	<p>
-		The trade-off is fewer restaurants and a slower pace — which is precisely the point for most
-		families who move here.
-	</p>
+	<p>You give up the late-night buzz and the tapas bar downstairs. For families, that's usually the point.</p>
 
-	<h2>The top 5 towns, ranked for expats</h2>
+	<h2>The towns, in rough order of what people ask for</h2>
 
 	<p>
-		<strong>1. Alella — prestige and proximity.</strong> The closest premium town to Barcelona.
-		Vineyards, upscale villas, and a strong international community. <em>Best for:</em>
-		professionals and families who want quality of life without a long commute.
+		<strong>Alella</strong> is the closest premium town, right where the vineyards start. It has
+		a real international community and some of the smartest villas on the coast. You're still
+		close enough to the city for a normal commute.
 	</p>
 	<p>
-		<strong>2. Sant Andreu de Llavaneres — luxury and privacy.</strong> Known for its high-end
-		homes, sea views, and one of the best golf clubs on the coast (El Balís). <em>Best for:</em>
-		luxury lifestyle seekers who value privacy and space.
+		<strong>Sant Andreu de Llavaneres</strong> is where the luxury market lives. Big homes, sea
+		views, and the El Balís golf club — one of the best courses on this stretch of coast. People
+		come here for privacy more than anything.
 	</p>
 	<p>
-		<strong>3. Sant Vicenç de Montalt — high-end family living.</strong> A quiet, exclusive town
-		next to Llavaneres, with some of the highest average rents in Maresme. <em>Best for:</em>
-		families wanting a top-tier residential area.
+		<strong>Sant Vicenç de Montalt</strong> sits right next to Llavaneres and quietly has some
+		of the highest rents in Maresme. It's residential, calm, and very family-oriented.
 	</p>
 	<p>
-		<strong>4. Teià — commuter-friendly premium.</strong> Closer to Barcelona, with a premium
-		residential profile and easy access to the highway and train. <em>Best for:</em> commuters
-		who still want a house, not a flat.
+		<strong>Teià</strong> is the commuter's pick — closer to Barcelona, with easy access to the
+		highway and the train. You can still get a house here without the top-end price tag.
 	</p>
 	<p>
-		<strong>5. Cabrils — quiet residential living.</strong> Attractive urbanizations, good value
-		for the area, and a peaceful, community feel. <em>Best for:</em> those who prioritise calm
-		and greenery over being right on the coast.
+		<strong>Cabrils</strong> is greener and more relaxed. Good value compared to the coast, with
+		quiet urbanizations and a slower pace.
 	</p>
 
-	<h2>How to choose the right one for you</h2>
-	<p>Ask yourself three questions:</p>
+	<h2>How to choose without overthinking it</h2>
+	<p>Three questions usually settle it:</p>
 	<ul>
-		<li><strong>Commute</strong> — how often do you need to be in Barcelona?</li>
-		<li><strong>Schools</strong> — which international school do your kids need to reach daily?</li>
-		<li><strong>Lifestyle</strong> — beach town, golf, or pure privacy?</li>
+		<li>How often do you really need to be in Barcelona?</li>
+		<li>Which school do your kids need to reach every day?</li>
+		<li>Do you want the beach, the golf course, or just privacy?</li>
 	</ul>
-	<p>The answer usually narrows it down to one or two towns immediately.</p>
+	<p>Answer those and you're down to one or two towns.</p>
 	<p>
-		Once you've picked your area, the next step is renting. Read our guide on
-		<a href="/guide/rent-villa-barcelona">how to rent a villa in Barcelona</a> — documents,
-		budget, lease terms, and how to move fast on a good property.
+		Once you've picked an area, the next step is renting. Our guide on
+		<a href="/guide/rent-villa-barcelona">how to rent a villa in Barcelona</a> covers documents,
+		budget, lease terms and how to move fast when a good property appears.
 	</p>
 
 	<div class="cta-box">
 		<h3>Let us match you to the right area</h3>
 		<p>
-			At Grandiora we know every town in Maresme — not from a map, but from living and working
-			here. Tell us your criteria and we'll send a shortlist of homes that actually fit.
+			We work across Maresme every week, not from a map. Tell us what you're looking for and
+			we'll send a shortlist of homes that actually fit your life.
 		</p>
 		<a class="btn" href="/contact">Get a free shortlist of villas in Maresme</a>
 		<a class="btn-link" href="/checklist.pdf">Download the free Pre-Signing Checklist</a>
