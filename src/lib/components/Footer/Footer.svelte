@@ -15,6 +15,10 @@
 		<a href="/guide/rent-villa-barcelona">How to rent a villa in Barcelona</a>
 		<span>·</span>
 		<a href="/guide/best-areas-maresme">Best areas for expats in Maresme</a>
+		<span>·</span>
+		<a href="/guide/nie-for-renting-in-spain">NIE for renting in Spain</a>
+		<span>·</span>
+		<a href="/guide/cost-of-living-barcelona-expats">Cost of living in Barcelona</a>
 	</div>
 </footer>
 
