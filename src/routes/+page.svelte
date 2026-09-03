@@ -1,4 +1,5 @@
 <script>
+	import { onMount } from 'svelte';
 	import Header from '$lib/components/Header/Header.svelte';
 	import SiteFooter from '$lib/components/Footer/Footer.svelte';
 	import FloatingContact from '$lib/components/FloatingContact/FloatingContact.svelte';
@@ -9,6 +10,19 @@
 	function showMore() {
 		visible += 9;
 	}
+
+	// Google Ads attribution (gclid / utm)
+	let gclid = '';
+	let utmSource = '';
+	let utmCampaign = '';
+	let utmMedium = '';
+	onMount(() => {
+		const q = new URLSearchParams(window.location.search);
+		gclid = q.get('gclid') || '';
+		utmSource = q.get('utm_source') || '';
+		utmCampaign = q.get('utm_campaign') || '';
+		utmMedium = q.get('utm_medium') || '';
+	});
 
 	// Lead magnet — checklist
 	const ENDPOINT_URL = 'https://g5joqg9b5m.execute-api.eu-north-1.amazonaws.com/default/grandiora_landing_leads';
@@ -32,10 +46,21 @@
 					name: leadName.trim(),
 					phone: leadContact.trim(),
 					message: 'Requested checklist (lead magnet)',
-					source: 'rental-en'
+					source: 'rental-en',
+					gclid,
+					utmSource,
+					utmCampaign,
+					utmMedium
 				})
 			});
 		} catch (e) {}
+		// Google Ads conversion + GA4 lead event
+		if (typeof window.gtag === 'function') {
+			window.gtag('event', 'generate_lead');
+			window.gtag('event', 'conversion', { send_to: 'AW-17552999108/7743873281' });
+		} else if (window.dataLayer) {
+			window.dataLayer.push({ event: 'generate_lead' });
+		}
 		leadOk = true;
 		leadMsg = '';
 		window.open('/checklist.pdf', '_blank');

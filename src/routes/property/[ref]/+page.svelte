@@ -30,6 +30,18 @@
 		if (typeof gtag === 'function') gtag('event', 'view_item', { items: [payload] });
 		else if (dl) dl.push({ event: 'view_item', items: [payload] });
 	});
+
+	// Лид-действия (WhatsApp / звонок) — считаем как конверсию Google Ads
+	function trackLead() {
+		const gtag = typeof window !== 'undefined' ? window.gtag : undefined;
+		const dl = typeof window !== 'undefined' ? window.dataLayer : undefined;
+		if (typeof gtag === 'function') {
+			gtag('event', 'generate_lead');
+			gtag('event', 'conversion', { send_to: 'AW-17552999108/7743873281' });
+		} else if (dl) {
+			dl.push({ event: 'generate_lead' });
+		}
+	}
 </script>
 
 <svelte:head>
@@ -79,8 +91,8 @@
 		{/if}
 
 		<div class="d-cta">
-			<a class="btn wa" href={WHATSAPP}>Request information on WhatsApp</a>
-			<a class="btn" href={PHONE_MAIN_LINK}>📞 Call {PHONE_MAIN}</a>
+			<a class="btn wa" href={WHATSAPP} onclick={trackLead}>Request information on WhatsApp</a>
+			<a class="btn" href={PHONE_MAIN_LINK} onclick={trackLead}>📞 Call {PHONE_MAIN}</a>
 		</div>
 		<div class="answer">We answer in 5 minutes</div>
 	</div>

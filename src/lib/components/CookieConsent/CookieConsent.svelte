@@ -7,23 +7,38 @@
 
 	let visible = $state(false);
 
-	function loadGa4() {
+	function initGtag() {
 		if (typeof window === 'undefined') return;
-		// защита от двойной загрузки
-		if ((window as any).__grandiora_ga4_loaded) return;
-		(window as any).__grandiora_ga4_loaded = true;
+		if ((window as any).__grandiora_gtag_loaded) return;
+		(window as any).__grandiora_gtag_loaded = true;
+		// Consent Mode v2 — конверсия Google Ads работает сразу, согласие управляет полнотой данных.
+		// dataLayer-очередь и window.gtag инициализируются СРАЗУ, до согласия → conversion всегда уйдёт.
+		window.dataLayer = window.dataLayer || [];
+		window.gtag = function () {
+			window.dataLayer.push(arguments);
+		};
+		window.gtag('consent', 'default', {
+			ad_storage: 'denied',
+			analytics_storage: 'denied',
+			wait_for_update: 500
+		});
+		// загружаем gtag.js сразу (без блокировки cookie-баннером)
 		const s = document.createElement('script');
 		s.async = true;
 		s.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
 		document.head.appendChild(s);
-		(window as any).dataLayer = (window as any).dataLayer || [];
-		(window as any).gtag = function () {
-			(window as any).dataLayer.push(arguments);
-		};
-		(window as any).gtag('js', new Date());
-		(window as any).gtag('config', GA4_ID);
+		window.gtag('js', new Date());
+		window.gtag('config', GA4_ID);
 		// Google Ads (conversion tracking)
-		(window as any).gtag('config', 'AW-17552999108');
+		window.gtag('config', 'AW-17552999108');
+	}
+
+	function grantConsent() {
+		if (typeof window === 'undefined' || !window.dataLayer) return;
+		window.gtag('consent', 'update', {
+			ad_storage: 'granted',
+			analytics_storage: 'granted'
+		});
 	}
 
 	function loadClarity() {
@@ -47,16 +62,18 @@
 	function accept() {
 		localStorage.setItem(STORAGE_KEY, 'accepted');
 		visible = false;
-		loadGa4();
 		loadClarity();
+		grantConsent();
 	}
 
 	onMount(() => {
-		// Clarity — функциональная аналитика, грузим сразу для всех (без согласия)
+		// GA4 + Google Ads конверсия: инициализируем сразу (Consent Mode v2, default denied)
+		initGtag();
+		// Clarity — функциональная аналитика, грузим сразу для всех без согласия
 		loadClarity();
-		// GA4 — только после согласия (упрощённый баннер OK)
+		// если уже принимали ранее — сразу даём полный консент
 		if (localStorage.getItem(STORAGE_KEY) === 'accepted') {
-			loadGa4();
+			grantConsent();
 		} else {
 			visible = true;
 		}
