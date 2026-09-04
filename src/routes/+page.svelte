@@ -150,7 +150,7 @@
 	<div class="hero-copy">
 		<div class="eyebrow">Rentals · Barcelona · Maresme</div>
 		<h1>Luxury villa <em>rentals</em>. Maresme &amp; Barcelona</h1>
-		<p>Exclusive villas and apartments for rent, with the utmost hospitality.</p>
+		<p>Exclusive villas and apartments for rent across Maresme &amp; Barcelona — most never reach the public portals.</p>
 		<div class="hero-trust"><span>Verified homes</span> · Flexible stays · Turnkey</div>
 
 		<form class="hero-form" onsubmit={submitHero} novalidate>
@@ -164,9 +164,10 @@
 				<input type="tel" bind:value={heroContact} placeholder="WhatsApp / phone" autocomplete="tel" />
 			</div>
 			<button class="btn" type="submit">Get the off-market list</button>
+			<div class="hero-form-note">Free · No spam · We answer within minutes</div>
 		</form>
 		{#if heroMsg}<div class="hero-msg">{heroMsg}</div>{/if}
-		{#if heroOk}<div class="hero-msg ok">Thanks! We'll contact you within minutes. ✅</div>{/if}
+		{#if heroOk}<div class="hero-msg ok">Thanks! We'll reply within 5 minutes. ✅</div>{/if}
 
 		<div class="cat-note"><a href="#top">Browse rental properties ↓</a> · Maresme · Barcelona</div>
 	</div>
@@ -412,6 +413,13 @@
 	}
 	.hero-msg.ok {
 		color: #2f8f4e;
+	}
+	.hero-form-note {
+		font-size: 12px;
+		color: #6b6b6b;
+		text-align: center;
+		margin-top: 2px;
+		letter-spacing: 0.3px;
 	}
 	.cat-note a {
 		color: #a9853f;
