@@ -804,6 +804,37 @@ footer {
 		display: none;
 	}
 
+	header {
+		padding: 12px 0;
+	}
+
+	.header-in {
+		flex-wrap: wrap;
+		gap: 10px 12px;
+	}
+
+	.brand {
+		font-size: 17px;
+		letter-spacing: 1.5px;
+	}
+
+	.header-cta {
+		gap: 7px;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		margin-left: auto;
+	}
+
+	.header-cta .guide-link {
+		font-size: 12px;
+	}
+
+	.header-cta .btn {
+		padding: 10px 14px;
+		min-height: 40px;
+		font-size: 10px;
+	}
+
 	.card .img img {
 		height: 220px;
 	}

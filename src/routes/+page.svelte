@@ -31,9 +31,22 @@
 	let leadMsg = $state('');
 	let leadOk = $state(false);
 
+	// Country codes for phone fields
+	const COUNTRY_CODES = [
+		['+34', '🇪🇸 +34'], ['+7', '🇷🇺 +7'], ['+380', '🇺🇦 +380'], ['+375', '🇧🇾 +375'],
+		['+1', '🇺🇸 +1'], ['+44', '🇬🇧 +44'], ['+49', '🇩🇪 +49'], ['+33', '🇫🇷 +33'],
+		['+39', '🇮🇹 +39'], ['+351', '🇵🇹 +351'], ['+31', '🇳🇱 +31'], ['+32', '🇧🇪 +32'],
+		['+41', '🇨🇭 +41'], ['+46', '🇸🇪 +46'], ['+47', '🇳🇴 +47'], ['+45', '🇩🇰 +45'],
+		['+358', '🇫🇮 +358'], ['+48', '🇵🇱 +48'], ['+420', '🇨🇿 +420'], ['+36', '🇭🇺 +36'],
+		['+40', '🇷🇴 +40'], ['+30', '🇬🇷 +30'], ['+90', '🇹🇷 +90'], ['+972', '🇮🇱 +972'],
+		['+971', '🇦🇪 +971'], ['+86', '🇨🇳 +86'], ['+91', '🇮🇳 +91'], ['+81', '🇯🇵 +81'],
+		['+55', '🇧🇷 +55'], ['+52', '🇲🇽 +52'], ['+54', '🇦🇷 +54'], ['+56', '🇨🇱 +56'], ['+57', '🇨🇴 +57']
+	];
+
 	// Hero lead capture (name + WhatsApp) — primary CTA
 	let heroName = $state('');
 	let heroContact = $state('');
+	let heroCountryCode = $state('+34');
 	let heroMsg = $state('');
 	let heroOk = $state(false);
 
@@ -50,7 +63,7 @@
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({
 					name: heroName.trim(),
-					phone: heroContact.trim(),
+					phone: heroCountryCode + ' ' + heroContact.trim(),
 					message: 'Hero form — requested off-market list',
 					source: 'rental-en',
 					gclid,
@@ -70,6 +83,9 @@
 		if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
 		heroOk = true;
 		heroMsg = '';
+		heroName = '';
+		heroContact = '';
+		heroCountryCode = '+34';
 	}
 
 	function requestChecklist(event) {
@@ -139,7 +155,14 @@
 
 		<form class="hero-form" onsubmit={submitHero} novalidate>
 			<input type="text" bind:value={heroName} placeholder="Your name" autocomplete="name" />
-			<input type="tel" bind:value={heroContact} placeholder="WhatsApp / phone" autocomplete="tel" />
+			<div class="phone-row">
+				<select class="cc" bind:value={heroCountryCode} aria-label="Country code">
+					{#each COUNTRY_CODES as [code, label]}
+						<option value={code}>{label}</option>
+					{/each}
+				</select>
+				<input type="tel" bind:value={heroContact} placeholder="WhatsApp / phone" autocomplete="tel" />
+			</div>
 			<button class="btn" type="submit">Get the off-market list</button>
 		</form>
 		{#if heroMsg}<div class="hero-msg">{heroMsg}</div>{/if}
@@ -352,6 +375,27 @@
 		width: 100%;
 		box-sizing: border-box;
 		min-height: 52px;
+	}
+	.hero-form .phone-row {
+		display: flex;
+		gap: 8px;
+	}
+	.hero-form .phone-row select.cc {
+		flex: 0 0 auto;
+		width: auto;
+		min-width: 96px;
+		padding: 14px 18px;
+		border: 1px solid #dcd3bf;
+		border-radius: 40px;
+		font-size: 15px;
+		background: #fff;
+		color: #202221;
+		box-sizing: border-box;
+		min-height: 52px;
+		cursor: pointer;
+	}
+	.hero-form .phone-row input {
+		flex: 1;
 	}
 	.hero-form button {
 		border-radius: 40px;
