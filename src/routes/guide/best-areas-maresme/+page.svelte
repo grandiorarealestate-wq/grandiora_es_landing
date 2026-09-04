@@ -22,7 +22,7 @@
 	</p>
 
 	<h2>Why people trade the city for Maresme</h2>
-	<p>Most of our clients tell us the same thing: they loved central Barcelona, then wanted more room. In Maresme you get a house instead of a flat. Gardens, pools, sea views, streets you can park on.</p>
+	<p>Most of our clients tell us the same thing: they loved central Barcelona, then wanted more room. In Maresme you get a house instead of a flat. Gardens, pools, sea views, and street parking you don't have to fight for.</p>
 	<ul>
 		<li>Villas and houses, not apartments</li>
 		<li>International schools within a short drive</li>
@@ -56,11 +56,11 @@
 	</p>
 
 	<h2>How to choose without overthinking it</h2>
-	<p>Three questions usually settle it:</p>
+	<p>Most of the time it comes down to three things:</p>
 	<ul>
 		<li>How often do you really need to be in Barcelona?</li>
 		<li>Which school do your kids need to reach every day?</li>
-		<li>Do you want the beach, the golf course, or just privacy?</li>
+		<li>The beach, the golf course, or just privacy?</li>
 	</ul>
 	<p>Answer those and you're down to one or two towns.</p>
 	<p>

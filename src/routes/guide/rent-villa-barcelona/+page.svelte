@@ -16,9 +16,9 @@
 <div class="wrap article">
 	<h1>How to Rent a Villa in Barcelona: Full Guide for Expats (2026)</h1>
 	<p class="lead">
-		Renting a villa near Barcelona isn't like renting an apartment back home. The market is
-		fast, competitive, and works by its own rules. This guide walks through everything, from the
-		documents you need to the day you get the keys.
+		Renting a villa near Barcelona isn't like renting an apartment back home. The market moves
+		fast and it plays by its own rules. This guide walks through everything, from the documents
+		you need to the day you get the keys.
 	</p>
 
 	<h2>1. Villa or apartment? Know what you're renting</h2>
@@ -38,9 +38,9 @@
 	<ul>
 		<li><strong>NIE</strong> (foreigner identification number)</li>
 		<li>Passport or ID</li>
-		<li><strong>Proof of income</strong>: contract, payslips or bank statements</li>
-		<li>Spanish bank account (often required)</li>
-		<li>A short note introducing yourself and your situation</li>
+		<li><strong>Proof of income</strong> — contract, payslips or a few months of bank statements</li>
+		<li>A Spanish bank account. Not always asked for, but common</li>
+		<li>A couple of lines about yourself and your situation</li>
 	</ul>
 	<p>
 		Well-priced properties in Barcelona can get 50 to 80+ inquiries within 24 hours. Being ready

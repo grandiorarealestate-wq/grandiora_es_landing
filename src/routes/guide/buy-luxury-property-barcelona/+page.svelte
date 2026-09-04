@@ -46,10 +46,11 @@
 	<h2>Prices, roughly</h2>
 	<p>
 		Numbers here move, and a "luxury" price tag depends enormously on street, floor, and state of
-		repair. As a rule of thumb: a genuinely high-end apartment in prime Eixample will start
-		around €1 million and climb from there. A detached house with a garden in Sarrià or Pedralbes
-		is typically several million and up. On the Maresme coast, a solid villa starts lower than
-		its Pedralbes equivalent and the real premium is for sea views and proximity to the water.
+		repair. As a rule of thumb: a genuinely high-end apartment in prime Eixample starts around
+		€1 million, and the better ones sail past that. A detached house with a garden in Sarrià or
+		Pedralbes runs several million, with the hillside addresses at the top of that band. On the
+		Maresme coast a solid villa starts lower than its Pedralbes equivalent, and the real premium
+		is for sea views and proximity to the water.
 	</p>
 	<p>
 		What most buyers miss is that the listed price is only part of the story. The taxes and
