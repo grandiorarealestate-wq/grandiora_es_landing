@@ -181,6 +181,29 @@
 	</div>
 </div>
 
+<div class="wrap" style="margin-top:26px">
+	<div class="whyus">
+		<h2 class="sec">Why rent with <span>Grandiora</span></h2>
+		<div class="why-grid">
+			<div class="why-item">
+				<div class="why-num">01</div>
+				<h3>We speak your language</h3>
+				<p>Russian, Ukrainian, Spanish and English. No lost-in-translation moments when you're signing a lease abroad.</p>
+			</div>
+			<div class="why-item">
+				<div class="why-num">02</div>
+				<h3>Off-market access</h3>
+				<p>Most of our villas never reach Idealista or Fotocasa. They go to our clients first, before they're public.</p>
+			</div>
+			<div class="why-item">
+				<div class="why-num">03</div>
+				<h3>On Passeig de Gràcia</h3>
+				<p>A real office in the heart of Barcelona, not a call centre. Meet us, or handle everything remotely.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="wrap" id="top">
 	<h2 class="sec">Our <span>gems</span></h2>
 	<div class="grid">
@@ -431,5 +454,43 @@
 		color: #a3a099;
 		font-size: 11px;
 		letter-spacing: .5px;
+	}
+
+	/* Why rent with Grandiora */
+	.whyus {
+		padding: 8px 0 4px;
+	}
+	.why-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 18px;
+	}
+	.why-item {
+		background: #f7f5f0;
+		border: 1px solid #e7ddc7;
+		border-radius: 12px;
+		padding: 22px 20px;
+	}
+	.why-num {
+		font-family: 'Playfair Display', serif;
+		font-size: 22px;
+		color: #c4a25e;
+		margin-bottom: 10px;
+	}
+	.why-item h3 {
+		font-size: 17px;
+		margin-bottom: 8px;
+		color: #202221;
+	}
+	.why-item p {
+		font-size: 14px;
+		line-height: 1.6;
+		color: #55534d;
+	}
+	@include sm {
+		.why-grid {
+			grid-template-columns: 1fr;
+			gap: 14px;
+		}
 	}
 </style>
