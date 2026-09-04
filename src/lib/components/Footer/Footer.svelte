@@ -19,6 +19,10 @@
 		<a href="/guide/nie-for-renting-in-spain">NIE for renting in Spain</a>
 		<span>·</span>
 		<a href="/guide/cost-of-living-barcelona-expats">Cost of living in Barcelona</a>
+		<span>·</span>
+		<a href="/guide/moving-to-barcelona-expat-guide">Moving to Barcelona as an expat</a>
+		<span>·</span>
+		<a href="/guide/buy-luxury-property-barcelona">Buying luxury property in Barcelona</a>
 	</div>
 </footer>
 
