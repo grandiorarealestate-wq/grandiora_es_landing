@@ -188,7 +188,7 @@
 			<div class="why-item">
 				<div class="why-num">01</div>
 				<h3>We speak your language</h3>
-				<p>Russian, Ukrainian, Spanish and English. No lost-in-translation moments when you're signing a lease abroad.</p>
+				<p>Spanish, English, French, Portuguese, Russian and Ukrainian. No lost-in-translation moments when you're signing a lease abroad.</p>
 			</div>
 			<div class="why-item">
 				<div class="why-num">02</div>
@@ -286,7 +286,7 @@
 		<div class="mava"><img src="/img/anastasia.png" alt="Anastasia" /></div>
 		<div class="mbody">
 			<h3>Anastasia</h3>
-			<p>I speak Russian, English and Spanish. Contact me — I'll find the perfect home for you.</p>
+			<p>I speak Spanish, English, French, Portuguese, Russian and Ukrainian. Contact me — I'll find the perfect home for you.</p>
 			<a class="btn" href={WHATSAPP}>Contact me — I answer in under 5 mins</a>
 		</div>
 	</div>

@@ -128,6 +128,8 @@
 					<ul class="langs">
 						<li>Spanish</li>
 						<li>English</li>
+						<li>French</li>
+						<li>Portuguese</li>
 						<li>Russian</li>
 						<li>Ukrainian</li>
 					</ul>
