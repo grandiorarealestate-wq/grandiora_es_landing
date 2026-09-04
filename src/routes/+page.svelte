@@ -339,7 +339,7 @@
 	.hero-form {
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
+		gap: 12px;
 		max-width: 420px;
 		margin: 0 auto 14px;
 	}
@@ -351,11 +351,15 @@
 		background: #fff;
 		width: 100%;
 		box-sizing: border-box;
+		min-height: 52px;
 	}
 	.hero-form button {
 		border-radius: 40px;
 		padding: 15px 24px;
 		font-size: 15px;
+		width: 100%;
+		box-sizing: border-box;
+		min-height: 52px;
 	}
 	.hero-msg {
 		margin-top: 4px;
