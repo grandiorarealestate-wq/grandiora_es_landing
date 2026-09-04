@@ -960,6 +960,35 @@ footer {
 		min-height: 88px;
 	}
 
+	.phone-row {
+		display: flex;
+		gap: 8px;
+
+		select.cc {
+			flex: 0 0 auto;
+			width: auto;
+			min-width: 96px;
+			padding: 13px;
+			background: #fff;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+			color: $black;
+			font-size: 16px;
+			font-family: 'Nunito Sans', sans-serif;
+			cursor: pointer;
+			transition: border-color 0.25s ease;
+
+			&:focus {
+				outline: none;
+				border-color: $gold;
+			}
+		}
+
+		input {
+			flex: 1;
+		}
+	}
+
 	button {
 		width: 100%;
 		margin-top: 22px;
