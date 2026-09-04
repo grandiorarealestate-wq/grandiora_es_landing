@@ -253,7 +253,7 @@
 			</div>
 		</div>
 		<div class="rev-more">
-			<a class="btn" href="https://maps.app.goo.gl/FJBSBULG3MohFQcs7" target="_blank" rel="noopener">Read all reviews on Google</a>
+			<a class="btn" href="https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21KUE1qbDVOV3RQZW1KNmQzSldTR2xEUzNoSWRIYxAB!2m1!1s0x0:0x17676b023d5c97a1!3m1!1s2@1:CAIQACodChtycF9oOmJPMjl5NWtPemJ6d3JWSGlDS3hIdHc%7C%7C?hl=en" target="_blank" rel="noopener">Read all reviews on Google</a>
 		</div>
 	</div>
 </div>
