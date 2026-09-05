@@ -1,5 +1,6 @@
 <script>
 	import { PHONE_MAIN, PHONE_MAIN_LINK, EMAIL } from '$lib/assets/data.js';
+	import { t } from '$lib/i18n.svelte.ts';
 </script>
 
 <div class="contact">
@@ -12,21 +13,21 @@
 <footer>
 	<div class="wrap">GRANDIORA · grandiorarealestate.com</div>
 	<div class="wrap guide-links">
-		<a href="/guide/rent-villa-barcelona">How to rent a villa in Barcelona</a>
+		<a href="/guide/rent-villa-barcelona">{t('flink.rent-villa')}</a>
 		<span>·</span>
-		<a href="/guide/best-areas-maresme">Best areas for expats in Maresme</a>
+		<a href="/guide/best-areas-maresme">{t('flink.best-areas')}</a>
 		<span>·</span>
-		<a href="/guide/nie-for-renting-in-spain">NIE for renting in Spain</a>
+		<a href="/guide/nie-for-renting-in-spain">{t('flink.nie')}</a>
 		<span>·</span>
-		<a href="/guide/cost-of-living-barcelona-expats">Cost of living in Barcelona</a>
+		<a href="/guide/cost-of-living-barcelona-expats">{t('flink.cost-living')}</a>
 		<span>·</span>
-		<a href="/guide/moving-to-barcelona-expat-guide">Moving to Barcelona as an expat</a>
+		<a href="/guide/moving-to-barcelona-expat-guide">{t('flink.moving')}</a>
 		<span>·</span>
-		<a href="/guide/buy-luxury-property-barcelona">Buying luxury property in Barcelona</a>
+		<a href="/guide/buy-luxury-property-barcelona">{t('flink.buy-luxury')}</a>
 		<span>·</span>
-		<a href="/guide/rent-house-with-pool-maresme">Renting a house with a pool in Maresme</a>
+		<a href="/guide/rent-house-with-pool-maresme">{t('flink.rent-pool')}</a>
 		<span>·</span>
-		<a href="/guide/best-neighborhoods-barcelona-families-schools">Best neighborhoods for families in Barcelona</a>
+		<a href="/guide/best-neighborhoods-barcelona-families-schools">{t('flink.best-nbhd')}</a>
 	</div>
 </footer>
 

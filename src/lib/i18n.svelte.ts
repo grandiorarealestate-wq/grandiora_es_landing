@@ -404,6 +404,15 @@ const dict: Record<Lang, Record<string, string>> = {
 		'gprv.h2g': '7. Keeping Your Information Up to Date',
 		'gprv.p12': 'To ensure that your personal data remains accurate and up to date, please inform us promptly of any changes. We are not responsible for the privacy policies or data processing practices of third-party websites that may be accessed through links available on our website.',
 		'gprv.p13': 'This Privacy Policy was last updated in August 2026 and may be amended from time to time to reflect changes to our website, applicable legislation, or relevant case law.',
+
+		'flink.rent-villa': 'How to rent a villa in Barcelona',
+		'flink.best-areas': 'Best areas for expats in Maresme',
+		'flink.nie': 'NIE for renting in Spain',
+		'flink.cost-living': 'Cost of living in Barcelona',
+		'flink.moving': 'Moving to Barcelona as an expat',
+		'flink.buy-luxury': 'Buying luxury property in Barcelona',
+		'flink.rent-pool': 'Renting a house with a pool in Maresme',
+		'flink.best-nbhd': 'Best neighborhoods for families in Barcelona',
 	},
 
 	es: {
@@ -772,6 +781,15 @@ const dict: Record<Lang, Record<string, string>> = {
 		'gprv.h2g': '7. Mantener Tu Información Actualizada',
 		'gprv.p12': 'Para garantizar que tus datos personales sigan siendo exactos y estén actualizados, te pedimos que nos informes con prontitud de cualquier cambio. No somos responsables de las políticas de privacidad ni de las prácticas de tratamiento de datos de sitios web de terceros a los que se pueda acceder mediante enlaces disponibles en nuestro sitio web.',
 		'gprv.p13': 'Esta Política de Privacidad se actualizó por última vez en agosto de 2026 y puede modificarse de vez en cuando para reflejar cambios en nuestro sitio web, en la legislación aplicable o en la jurisprudencia relevante.',
+
+		'flink.rent-villa': 'Cómo alquilar una villa en Barcelona',
+		'flink.best-areas': 'Mejores zonas para expatriados en Maresme',
+		'flink.nie': 'NIE para alquilar en España',
+		'flink.cost-living': 'Coste de vida en Barcelona',
+		'flink.moving': 'Mudarse a Barcelona como expatriado',
+		'flink.buy-luxury': 'Comprar una propiedad de lujo en Barcelona',
+		'flink.rent-pool': 'Alquilar una casa con piscina en Maresme',
+		'flink.best-nbhd': 'Mejores barrios para familias en Barcelona',
 	},
 
 	ru: {
@@ -1140,6 +1158,15 @@ const dict: Record<Lang, Record<string, string>> = {
 		'gprv.h2g': '7. Актуальность вашей информации',
 		'gprv.p12': 'Чтобы ваши персональные данные оставались точными и актуальными, пожалуйста, своевременно сообщайте нам о любых изменениях. Мы не несём ответственности за политики конфиденциальности или практики обработки данных сторонних сайтов, доступ к которым возможен по ссылкам на нашем сайте.',
 		'gprv.p13': 'Настоящая Политика конфиденциальности обновлена в августе 2026 года и может время от времени изменяться в связи с изменениями нашего сайта, применимого законодательства или соответствующей практики.',
+
+		'flink.rent-villa': 'Как арендовать виллу в Барселоне',
+		'flink.best-areas': 'Лучшие районы Маресме для экспатов',
+		'flink.nie': 'NIE для аренды в Испании',
+		'flink.cost-living': 'Стоимость жизни в Барселоне',
+		'flink.moving': 'Переезд в Барселону для экспата',
+		'flink.buy-luxury': 'Покупка элитной недвижимости в Барселоне',
+		'flink.rent-pool': 'Аренда дома с бассейном в Маресме',
+		'flink.best-nbhd': 'Лучшие районы для семей в Барселоне',
 	},
 };
 
