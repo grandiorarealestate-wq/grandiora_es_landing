@@ -177,7 +177,7 @@
 <div class="trust">
 	<div class="wrap inner">
 		<div class="item"><b>+10</b><span>{t('trust.years')}</span></div>
-		<div class="item"><b>+8</b><span>{t('trust.langs')}</span></div>
+		<div class="item"><b>+6</b><span>{t('trust.langs')}</span></div>
 		<div class="item"><b>+200</b><span>{t('trust.props')}</span></div>
 	</div>
 </div>
@@ -200,6 +200,11 @@
 				<div class="why-num">03</div>
 				<h3>{t('why.3.h')}</h3>
 				<p>{t('why.3.p')}</p>
+			</div>
+			<div class="why-item">
+				<div class="why-num">04</div>
+				<h3>{t('why.4.h')}</h3>
+				<p>{t('why.4.p')}</p>
 			</div>
 		</div>
 	</div>
