@@ -7,7 +7,7 @@
 	<div class="wrap">
 		<a href={PHONE_MAIN_LINK}><b>{PHONE_MAIN}</b></a> ·
 		<a href={`mailto:${EMAIL}`}>{EMAIL}</a> ·
-		Passeig de Gràcia 55, 4-6, 08007 Barcelona
+		<a href="https://maps.app.goo.gl/TPkTr1h5eRiX1ZfT7" target="_blank" rel="noopener">Passeig de Gràcia 55, 4-6, 08007 Barcelona</a>
 	</div>
 </div>
 <footer>
@@ -32,6 +32,8 @@
 </footer>
 
 <style>
+	.contact a { color: inherit; text-decoration: none; }
+	.contact a:hover { text-decoration: underline; }
 	.guide-links {
 		margin-top: 10px;
 		font-size: 13px;
