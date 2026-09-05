@@ -23,6 +23,10 @@
 		<a href="/guide/moving-to-barcelona-expat-guide">Moving to Barcelona as an expat</a>
 		<span>·</span>
 		<a href="/guide/buy-luxury-property-barcelona">Buying luxury property in Barcelona</a>
+		<span>·</span>
+		<a href="/guide/rent-house-with-pool-maresme">Renting a house with a pool in Maresme</a>
+		<span>·</span>
+		<a href="/guide/best-neighborhoods-barcelona-families-schools">Best neighborhoods for families in Barcelona</a>
 	</div>
 </footer>
 
