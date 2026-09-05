@@ -4,6 +4,7 @@
 	import FloatingContact from '$lib/components/FloatingContact/FloatingContact.svelte';
 	import PropertyCard from '$lib/components/PropertyCard/PropertyCard.svelte';
 	import { saleProperties, PHONE_MAIN, PHONE_MAIN_LINK, WHATSAPP, TELEGRAM } from '$lib/assets/sale';
+	import { t } from '$lib/i18n.svelte.ts';
 
 	const HERO_IMG = '/img/hero_rental.jpg';
 
@@ -25,7 +26,7 @@
 	function submit(event) {
 		event.preventDefault();
 		if (!name.trim() || !phone.trim()) {
-			formMsg = 'Please fill in your name and phone.';
+			formMsg = t('contact.err');
 			msgColor = '#c0392b';
 			return;
 		}
@@ -49,7 +50,7 @@
 		}
 		// Meta Pixel Lead
 		if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
-		formMsg = 'Thank you! We answer within minutes.';
+		formMsg = t('sale.ok');
 		msgColor = '#2f8f4e';
 		name = '';
 		phone = '';
@@ -79,28 +80,28 @@
 		<img src={HERO_IMG} alt="Luxury villa with pool in Maresme, Barcelona" />
 	</div>
 	<div class="hero-copy">
-		<div class="eyebrow">For sale · Barcelona · Maresme</div>
-		<h1>Luxury homes <em>for sale</em>. Barcelona &amp; Maresme</h1>
-		<p>Exclusive penthouses, villas and estates — with expert representation and turnkey service.</p>
-		<div class="hero-trust"><span>Prime locations</span> · Expert negotiation · Turnkey</div>
+		<div class="eyebrow">{t('sale.eyebrow')}</div>
+		<h1>{t('sale.h1a')}<em>{t('sale.h1em')}</em>{t('sale.h1b')}</h1>
+		<p>{t('sale.sub')}</p>
+		<div class="hero-trust"><span>{t('sale.trust.span')}</span> · {t('sale.trust').replace(t('sale.trust.span') + ' · ', '')}</div>
 		<div class="cta">
-			<a class="btn" href="#catalogue">View homes for sale</a>
+			<a class="btn" href="#catalogue">{t('sale.cta')}</a>
 		</div>
-		<div class="cat-note">Sale catalogue · Barcelona · Maresme</div>
+		<div class="cat-note">{t('sale.catnote')}</div>
 	</div>
 </div>
 
 <!-- ===== Cross-link to rentals ===== -->
 <div class="cross">
 	<div class="cross-in">
-		<span>Looking to rent instead?</span>
-		<a class="clink" href="/villas-maresme">View luxury rentals →</a>
+		<span>{t('sale.cross.q')}</span>
+		<a class="clink" href="/villas-maresme">{t('sale.cross.link')}</a>
 	</div>
 </div>
 
 <!-- ===== Catalogue ===== -->
 <div class="wrap" id="catalogue">
-	<h2 class="sec">Featured <span>homes</span></h2>
+	<h2 class="sec">{t('sale.featured1')}<span>{t('sale.featured2')}</span></h2>
 	<div class="grid">
 		{#each saleProperties.slice(0, visible) as p (p.ref)}
 			<PropertyCard {p} />
@@ -108,7 +109,7 @@
 	</div>
 	{#if visible < saleProperties.length}
 		<div class="show-more">
-			<button class="btn" onclick={showMore}>Show more</button>
+			<button class="btn" onclick={showMore}>{t('gems.more')}</button>
 		</div>
 	{/if}
 </div>
@@ -116,36 +117,36 @@
 <!-- ===== Lead form ===== -->
 <div class="wrap lead-sec">
 	<div class="lead">
-		<h3>Tell us what you're looking for</h3>
-		<p>Leave your details — we share our full portfolio and answer within minutes.</p>
+		<h3>{t('sale.lead.h')}</h3>
+		<p>{t('sale.lead.p')}</p>
 		<form onsubmit={submit} novalidate>
 			<div class="row">
-				<input type="text" bind:value={name} placeholder="Your name" autocomplete="name" required />
-				<input type="tel" bind:value={phone} placeholder="Phone / WhatsApp" autocomplete="tel" required />
+				<input type="text" bind:value={name} placeholder={t('hero.name')} autocomplete="name" required />
+				<input type="tel" bind:value={phone} placeholder={t('contact.phone')} autocomplete="tel" required />
 			</div>
 			<div class="row">
 				<select bind:value={city}>
-					<option value="">City / Area…</option>
+					<option value="">{t('sale.city')}</option>
 					<option>Barcelona</option>
 					<option>Alella</option>
 					<option>Cabrils</option>
 					<option>Cabrera de Mar</option>
 					<option>Sant Andreu de Llavaneres</option>
 					<option>Cardedeu</option>
-					<option>Other</option>
+					<option>{t('contact.other')}</option>
 				</select>
 				<select bind:value={family}>
-					<option value="">Household…</option>
-					<option>Single</option>
-					<option>Couple</option>
-					<option>Couple + children</option>
-					<option>Family 3+</option>
-					<option>Investor</option>
-					<option>Other</option>
+					<option value="">{t('sale.household')}</option>
+					<option>{t('family.single')}</option>
+					<option>{t('family.couple')}</option>
+					<option>{t('family.couple_kids')}</option>
+					<option>{t('family.family3')}</option>
+					<option>{t('sale.investor')}</option>
+					<option>{t('contact.other')}</option>
 				</select>
 			</div>
-			<textarea bind:value={msg} placeholder="Area, bedrooms, budget, move-in date…"></textarea>
-			<button class="btn" type="submit">Request information</button>
+			<textarea bind:value={msg} placeholder={t('contact.msg.ph')}></textarea>
+			<button class="btn" type="submit">{t('sale.request')}</button>
 		</form>
 		{#if formMsg}<div class="form-msg" style="color:{msgColor}">{formMsg}</div>{/if}
 	</div>
@@ -153,10 +154,10 @@
 
 <!-- ===== Final CTA ===== -->
 <div class="wrap final">
-	<h2 class="sec">Let's <span>talk</span></h2>
+	<h2 class="sec">{t('final.title1')}<span>{t('final.title2')}</span></h2>
 	<div class="fc-row">
-		<a class="btn" href={PHONE_MAIN_LINK}>📞 Call {PHONE_MAIN}</a>
-		<a class="btn wa" href={WHATSAPP}>WhatsApp</a>
+		<a class="btn" href={PHONE_MAIN_LINK}>📞 {t('final.call')} {PHONE_MAIN}</a>
+		<a class="btn wa" href={WHATSAPP}>{t('final.whatsapp')}</a>
 		<a class="btn tg" href={TELEGRAM}>Telegram</a>
 	</div>
 </div>

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Header from '$lib/components/Header/Header.svelte';
 	import SiteFooter from '$lib/components/Footer/Footer.svelte';
+	import { t } from '$lib/i18n.svelte.ts';
 </script>
 
 <svelte:head>
@@ -14,69 +15,40 @@
 <Header />
 
 <div class="wrap article">
-	<h1>Best Areas for Expats in Maresme: Where to Rent a Luxury Home Near Barcelona</h1>
-	<p class="lead">
-		Barcelona is great until you want a garden, a pool and a bit of quiet. That's when most
-		expats start looking north, to the coast. Maresme is the strip of towns between the city and
-		the sea, and each one has a very different feel. Here's what they're actually like.
-	</p>
+	<h1>{t('garea.h1')}</h1>
+	<p class="lead">{t('garea.lead')}</p>
 
-	<h2>Why people trade the city for Maresme</h2>
-	<p>Most of our clients tell us the same thing: they loved central Barcelona, then wanted more room. In Maresme you get a house instead of a flat. Gardens, pools, sea views, and street parking you don't have to fight for.</p>
+	<h2>{t('garea.h2a')}</h2>
+	<p>{t('garea.p1')}</p>
 	<ul>
-		<li>Villas and houses, not apartments</li>
-		<li>International schools within a short drive</li>
-		<li>20 to 40 minutes to Barcelona, depending on the town</li>
+		<li>{t('garea.li1')}</li>
+		<li>{t('garea.li2')}</li>
+		<li>{t('garea.li3')}</li>
 	</ul>
-	<p>You give up the late-night buzz and the tapas bar downstairs. For families, that's usually the point.</p>
+	<p>{t('garea.p2')}</p>
 
-	<h2>The towns, in rough order of what people ask for</h2>
+	<h2>{t('garea.h2b')}</h2>
+	<p>{t('garea.p3')}</p>
+	<p>{t('garea.p4')}</p>
+	<p>{t('garea.p5')}</p>
+	<p>{t('garea.p6')}</p>
+	<p>{t('garea.p7')}</p>
 
-	<p>
-		<strong>Alella</strong> is the closest premium town, right where the vineyards start. It has
-		a real international community and some of the smartest villas on the coast. You're still
-		close enough to the city for a normal commute.
-	</p>
-	<p>
-		<strong>Sant Andreu de Llavaneres</strong> is where the luxury market lives. Big homes, sea
-		views, and the El Balís golf club — one of the best courses on this stretch of coast. People
-		come here for privacy more than anything.
-	</p>
-	<p>
-		<strong>Sant Vicenç de Montalt</strong> sits right next to Llavaneres and quietly has some
-		of the highest rents in Maresme. It's residential, calm, and very family-oriented.
-	</p>
-	<p>
-		<strong>Teià</strong> is the commuter's pick — closer to Barcelona, with easy access to the
-		highway and the train. You can still get a house here without the top-end price tag.
-	</p>
-	<p>
-		<strong>Cabrils</strong> is greener and more relaxed. Good value compared to the coast, with
-		quiet urbanizations and a slower pace.
-	</p>
-
-	<h2>How to choose without overthinking it</h2>
-	<p>Most of the time it comes down to three things:</p>
+	<h2>{t('garea.h2c')}</h2>
+	<p>{t('garea.p8')}</p>
 	<ul>
-		<li>How often do you really need to be in Barcelona?</li>
-		<li>Which school do your kids need to reach every day?</li>
-		<li>The beach, the golf course, or just privacy?</li>
+		<li>{t('garea.li4')}</li>
+		<li>{t('garea.li5')}</li>
+		<li>{t('garea.li6')}</li>
 	</ul>
-	<p>Answer those and you're down to one or two towns.</p>
-	<p>
-		Once you've picked an area, the next step is renting. Our guide on
-		<a href="/guide/rent-villa-barcelona">how to rent a villa in Barcelona</a> covers documents,
-		budget, lease terms and how to move fast when a good property appears.
-	</p>
+	<p>{t('garea.p9')}</p>
+	<p>{t('garea.p10')} <a href="/guide/rent-villa-barcelona">{t('gvilla.h1')}</a></p>
 
 	<div class="cta-box">
-		<h3>Let us match you to the right area</h3>
-		<p>
-			We work across Maresme every week, not from a map. Tell us what you're looking for and
-			we'll send a shortlist of homes that actually fit your life.
-		</p>
-		<a class="btn" href="/contact">Get a free shortlist of villas in Maresme</a>
-		<a class="btn-link" href="/checklist.pdf">Download the free Pre-Signing Checklist</a>
+		<h3>{t('garea.cta.h')}</h3>
+		<p>{t('garea.cta.p')}</p>
+		<a class="btn" href="/contact">{t('garea.cta.btn')}</a>
+		<a class="btn-link" href="/checklist.pdf">{t('garea.cta.link')}</a>
 	</div>
 </div>
 

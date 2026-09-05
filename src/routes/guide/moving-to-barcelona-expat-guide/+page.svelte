@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Header from '$lib/components/Header/Header.svelte';
 	import SiteFooter from '$lib/components/Footer/Footer.svelte';
+	import { t } from '$lib/i18n.svelte.ts';
 </script>
 
 <svelte:head>
@@ -14,85 +15,38 @@
 <Header />
 
 <div class="wrap article">
-	<h1>Moving to Barcelona as an Expat: What Actually Matters</h1>
-	<p class="lead">
-		So you're thinking about Barcelona. Good call — the city has a way of grabbing people and not
-		letting go. But the move itself has a few parts that catch newcomers off guard. This is the
-		stuff nobody puts in the glossy brochure, written by people who've seen a lot of expats land
-		here (some smoothly, some not).
-	</p>
+	<h1>{t('gmove.h1')}</h1>
+	<p class="lead">{t('gmove.lead')}</p>
 
-	<h2>First: do you actually want the city, or the coast?</h2>
-	<p>
-		This is the decision that shapes everything else, and most people skip it. Barcelona proper is
-		lively, walkable, and expensive for space. The Maresme coast north of the city — Alella, El
-		Masnou, Sant Andreu de Llavaneres, Cabrils — gives you a house, a garden, and often a pool,
-		for what a cramped three-bed flat costs in the centre.
-	</p>
-	<p>
-		The trade-off is commuting. From Alella or El Masnou you're looking at roughly 20 to 30
-		minutes by car into the city, or a train ride on the R1 line that runs up and down the coast.
-		Some people love the quiet and never look back. Others miss the buzz and regret it. Be honest
-		with yourself about which one you are before you sign anything.
-	</p>
+	<h2>{t('gmove.h2a')}</h2>
+	<p>{t('gmove.p1')}</p>
+	<p>{t('gmove.p2')}</p>
 
-	<h2>The paperwork you can't dodge</h2>
-	<p>
-		Let's get the boring part out of the way, because it's the part that delays people. You'll
-		need a <strong>NIE</strong> (foreigner identification number) for almost everything here:
-		renting, opening a bank account, getting a phone contract, buying property. It's a number, not
-		a residence permit, and it's worth sorting out early.
-	</p>
-	<p>
-		After that come the usual suspects: <em>empadronamiento</em> (registering your address at the
-		town hall), a Spanish bank account, and healthcare. If you're an EU citizen the process is
-		relatively straightforward. Non-EU, and you'll want to sort your visa or residence status
-		first, since landlords and banks will ask for it.
-	</p>
+	<h2>{t('gmove.h2b')}</h2>
+	<p>{t('gmove.p3')}</p>
+	<p>{t('gmove.p4')}</p>
 
-	<h2>Where people actually settle</h2>
-	<p>
-		There's no single right answer, but there are patterns. Young professionals gravitate to
-		<strong>Eixample</strong> and <strong>Gràcia</strong> — central, pretty, and full of cafés.
-		Families often drift to <strong>Sarrià-Sant Gervasi</strong> or <strong>Les Corts</strong> for
-		the schools and quieter streets. Then there's the crowd that realises they want a garden and
-		heads up the coast.
-	</p>
-	<p>
-		By the way, if you have kids in international school, this single factor usually decides the map.
-		The big names — the American School of Barcelona, Benjamin Franklin, the British School of
-		Barcelona — sit in and around the city, and parents tend to live within a sane school run.
-		Factor the school run into your search radius before you fall in love with a house on the
-		wrong side of the city.
-	</p>
+	<h2>{t('gmove.h2c')}</h2>
+	<p>{t('gmove.p5')}</p>
+	<p>{t('gmove.p6')}</p>
 
-	<h2>A few things that surprise people</h2>
+	<h2>{t('gmove.h2d')}</h2>
 	<ul>
-		<li>Renting here moves fast. Good flats can get dozens of inquiries in a day. Have your documents ready or you'll miss out.</li>
-		<li>Landlords often want proof of income and a few months upfront, not just a deposit.</li>
-		<li>Spanish bureaucracy runs on appointments, and they fill up. Book the NIE slot early.</li>
-		<li>August is half closed. If you arrive then, expect delays on everything.</li>
-		<li>Your first month will be slow. That's normal, not a sign the move was a mistake.</li>
+		<li>{t('gmove.li1')}</li>
+		<li>{t('gmove.li2')}</li>
+		<li>{t('gmove.li3')}</li>
+		<li>{t('gmove.li4')}</li>
+		<li>{t('gmove.li5')}</li>
 	</ul>
 
-	<h2>The short version</h2>
-	<p>
-		Decide city vs. coast first. Sort the NIE and bank account second. Pick a neighbourhood that
-		fits your actual life (schools, commute, social scene), not the one that looks best on
-		Instagram. Then find the home, and do it with someone who knows the local market rather than
-		fighting the portals alone. The people who move well are the ones who do the boring parts
-		first.
-	</p>
+	<h2>{t('gmove.h2e')}</h2>
+	<p>{t('gmove.p7')}</p>
 
 	<div class="cta-box">
-		<h3>Moving over and need a place to land?</h3>
-		<p>
-			We're Grandiora, a Barcelona agency that helps expats find homes — from city flats to
-			luxury villas along the Maresme coast. Tell us your timeline and budget, and we'll help
-			you avoid the common mistakes.
-		</p>
-		<a class="btn" href="/contact">Tell us about your move</a>
-		<a class="btn-link" href="/checklist.pdf">Download the free Pre-Signing Checklist</a>
+		<h3>{t('gmove.cta.h')}</h3>
+		<p>{t('gmove.cta.p')}</p>
+		<a class="btn" href="/contact">{t('gmove.cta.btn')}</a>
+		<a class="btn-link" href="/checklist.pdf">{t('gmove.cta.link')}</a>
 	</div>
 </div>
 

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Header from '$lib/components/Header/Header.svelte';
 	import SiteFooter from '$lib/components/Footer/Footer.svelte';
+	import { t } from '$lib/i18n.svelte.ts';
 </script>
 
 <svelte:head>
@@ -14,74 +15,48 @@
 <Header />
 
 <div class="wrap article">
-	<h1>How to Rent a Villa in Barcelona: Full Guide for Expats (2026)</h1>
-	<p class="lead">
-		Renting a villa near Barcelona isn't like renting an apartment back home. The market moves
-		fast and it plays by its own rules. This guide walks through everything, from the documents
-		you need to the day you get the keys.
-	</p>
+	<h1>{t('gvilla.h1')}</h1>
+	<p class="lead">{t('gvilla.lead')}</p>
 
-	<h2>1. Villa or apartment? Know what you're renting</h2>
-	<p>
-		Most rental stock in central Barcelona is apartments. Villas are a smaller market,
-		concentrated on the coast north of the city, in <strong>Maresme</strong> (Alella, Sant Andreu
-		de Llavaneres, Cabrils, Teià, Sant Vicenç de Montalt). If you want space, a garden and a
-		pool, that's where to look.
-	</p>
-	<p>
-		One thing to check: make sure the contract says <em>arrendamiento de vivienda habitual</em>
-		(long-term residential lease), not a temporary or tourist lease. Only the residential lease
-		gives you full tenant protections.
-	</p>
+	<h2>{t('gvilla.h2a')}</h2>
+	<p>{t('gvilla.p1')}</p>
+	<p>{t('gvilla.p2')}</p>
 
-	<h2>2. Documents to have ready</h2>
+	<h2>{t('gvilla.h2b')}</h2>
 	<ul>
-		<li><strong>NIE</strong> (foreigner identification number)</li>
-		<li>Passport or ID</li>
-		<li><strong>Proof of income</strong> — contract, payslips or a few months of bank statements</li>
-		<li>A Spanish bank account. Not always asked for, but common</li>
-		<li>A couple of lines about yourself and your situation</li>
+		<li><strong>NIE</strong> {t('gvilla.li1')}</li>
+		<li>{t('gvilla.li2')}</li>
+		<li><strong>{t('gvilla.li3')}</strong></li>
+		<li>{t('gvilla.li4')}</li>
+		<li>{t('gvilla.li5')}</li>
 	</ul>
-	<p>
-		Well-priced properties in Barcelona can get 50 to 80+ inquiries within 24 hours. Being ready
-		to apply immediately is your biggest advantage.
-	</p>
+	<p>{t('gvilla.p3')}</p>
 
-	<h2>3. What you'll pay upfront</h2>
-	<p>
-		The standard <em>fianza</em> (deposit) is one month's rent. Landlords may also ask for up to
-		two extra months as an additional guarantee. In practice, budget for:
-	</p>
+	<h2>{t('gvilla.h2c')}</h2>
+	<p>{t('gvilla.p4')}</p>
 	<ul>
-		<li>First month's rent</li>
-		<li>One month deposit</li>
-		<li>Up to two months extra guarantee</li>
+		<li>{t('gvilla.li6')}</li>
+		<li>{t('gvilla.li7')}</li>
+		<li>{t('gvilla.li8')}</li>
 	</ul>
-	<p>That works out to roughly three to four months upfront before you get the keys.</p>
+	<p>{t('gvilla.p5')}</p>
 
-	<h2>4. Lease length and your rights</h2>
+	<h2>{t('gvilla.h2d')}</h2>
 	<ul>
-		<li>Private individual landlord: you can stay up to <strong>5 years</strong></li>
-		<li>Company landlord: up to <strong>7 years</strong></li>
-		<li>You can usually leave after 6 months with 30 days' notice</li>
+		<li>{t('gvilla.li9')}</li>
+		<li>{t('gvilla.li10')}</li>
+		<li>{t('gvilla.li11')}</li>
 	</ul>
-	<p>Read the exit clause before you sign. It's the part people skip and regret later.</p>
+	<p>{t('gvilla.p6')}</p>
 
-	<h2>5. The fastest way to find a villa</h2>
-	<p>
-		Portals like Idealista, Fotocasa and Habitaclia work, but villas in Maresme are often
-		<strong>off-market</strong>, shared directly through agencies before they reach the portals.
-		A local specialist saves you weeks here.
-	</p>
+	<h2>{t('gvilla.h2e')}</h2>
+	<p>{t('gvilla.p7')}</p>
 
 	<div class="cta-box">
-		<h3>Need help finding your villa?</h3>
-		<p>
-			We're Grandiora, a Barcelona-based agency focused on luxury villas and homes in Maresme
-			and along the coast. We answer within minutes and share our full off-market portfolio.
-		</p>
-		<a class="btn" href="/contact">Get a free shortlist of villas</a>
-		<a class="btn-link" href="/checklist.pdf">Download the free Pre-Signing Checklist</a>
+		<h3>{t('gvilla.cta.h')}</h3>
+		<p>{t('gvilla.cta.p')}</p>
+		<a class="btn" href="/contact">{t('gvilla.cta.btn')}</a>
+		<a class="btn-link" href="/checklist.pdf">{t('gvilla.cta.link')}</a>
 	</div>
 </div>
 
