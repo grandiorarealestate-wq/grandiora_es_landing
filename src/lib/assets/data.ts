@@ -192,3 +192,14 @@ export const properties = [
 		description: "Detached house for rent with 489 m² on a 4,175 m² plot, 5 bedrooms and 7 bathrooms. Private pool, 4 parking spaces, storage room, elevator.",
 	},
 ];
+
+// Featured order: pin these 4 first, keep the rest in their existing order.
+const FEATURED_ORDER = ['1269', '1262', '1203', '1275'];
+properties.sort((a, b) => {
+	const ai = FEATURED_ORDER.indexOf(a.ref);
+	const bi = FEATURED_ORDER.indexOf(b.ref);
+	if (ai === -1 && bi === -1) return 0;
+	if (ai === -1) return 1;
+	if (bi === -1) return -1;
+	return ai - bi;
+});
