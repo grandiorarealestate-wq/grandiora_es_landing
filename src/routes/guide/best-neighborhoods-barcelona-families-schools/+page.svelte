@@ -17,8 +17,7 @@
 	<h1>Best Neighborhoods in Barcelona for Families (and the Schools Nearby)</h1>
 	<p class="lead">
 		Moving to Barcelona with kids changes the whole map. The neighbourhood you'd pick as a
-		couple is rarely the one you pick with a school run to plan. This is the honest version:
-		where families actually settle, and why.
+		couple is rarely the one you pick with a school run to plan. This is where families actually settle, and why.
 	</p>
 
 	<h2>First, the school question drives everything</h2>
@@ -37,7 +36,7 @@
 		<li><strong>Hamelin-Laie International School</strong> — out in Alella, on the Maresme coast</li>
 	</ul>
 	<p>
-		So right away you can see the geography: if you're tied to ASB you look west, if you want
+		The geography tells the story: if you're tied to ASB you look west, if you want
 		BSB you look south, and if you like the Maresme idea there's Hamelin-Laie. The school picks
 		the neighbourhood more than the neighbourhood picks itself.
 	</p>
@@ -46,7 +45,7 @@
 
 	<h3>Sarrià–Sant Gervasi</h3>
 	<p>
-		This is the classic family answer. Sarrià, Pedralbes, Tres Torres, Sant Gervasi — quiet,
+		The classic family answer. Sarrià, Pedralbes, Tres Torres, Sant Gervasi — quiet,
 		leafy, full of schools and with a village feel inside a big city. It's expensive, and
 		apartments skew larger and older, but you're walking distance from half the international
 		schools in the city. If budget isn't the main constraint, most families land here and stay.
@@ -80,14 +79,14 @@
 		If you want a house with a garden and you're not wedded to being in the city at all, the
 		coast north of Barcelona — Alella, Teià, Cabrils, Sant Andreu de Llavaneres — is the move.
 		The R1 train keeps you connected, and there's a genuine international-school presence around
-		Alella. This is the "space over city" play, and it's a popular one for families coming with
+		Alella. This is the "space over city" play, and it's popular with families coming with
 		two or three kids.
 	</p>
 
 	<h2>What actually matters when you choose</h2>
 	<p>
 		Three things, in our experience, decide it more than any article does: the school's location
-		(obviously), the commute to work, and how much outdoor space you can realistically get for
+		the commute to work, and how much outdoor space you can realistically get for
 		your budget. Everything else — the "best area" lists, the rankings — is noise compared to
 		those three.
 	</p>
