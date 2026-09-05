@@ -139,7 +139,7 @@
 		content="Top selection of luxury rental properties for expats & internationals on long stays. We answer within minutes."
 	/>
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content="https://grandiorarealestate.com/rental-en/img/villa1.jpg" />
+	<meta property="og:image" content="https://grandiora.co/img/hero_rental.jpg" />
 </svelte:head>
 
 <Header />
