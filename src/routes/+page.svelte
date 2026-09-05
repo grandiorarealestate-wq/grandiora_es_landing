@@ -331,6 +331,9 @@
 		background: #f7f5f0;
 		border-bottom: 1px solid #e7ddc7;
 	}
+	.hero-media {
+		padding: 0 clamp(16px, 4vw, 26px);
+	}
 	.hero-media img {
 		width: 100%;
 		aspect-ratio: 16 / 9;
