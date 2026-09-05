@@ -468,7 +468,7 @@
 	}
 	.why-grid {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		gap: 18px;
 	}
 	.why-item {
@@ -493,7 +493,7 @@
 		line-height: 1.6;
 		color: #55534d;
 	}
-	@include sm {
+	@media (max-width: 860px) {
 		.why-grid {
 			grid-template-columns: 1fr;
 			gap: 14px;
