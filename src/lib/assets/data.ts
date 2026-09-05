@@ -7,19 +7,6 @@ export const EMAIL = 'info@grandiora.es';
 
 export const properties = [
 	{
-		ref: '1246',
-		title: "Exclusive off-market Catalan masia with pool, vineyard and sea views in Tiana",
-		price: '€30,000 /month',
-		priceEur: 30000,
-		perMonth: true,
-		type: 'Villa',
-		loc: "Tiana",
-		feat: "6 beds · 7 baths · 930 m²",
-		img: "https://media.mobiliagestion.es/Portals/inmograndiora/Images/1246/27462400.jpg",
-		gallery: ["https://media.mobiliagestion.es/Portals/inmograndiora/Images/1246/27462400.jpg","https://media.mobiliagestion.es/Portals/inmograndiora/Images/1246/27462404.jpg","https://media.mobiliagestion.es/Portals/inmograndiora/Images/1246/27462405.jpg","https://media.mobiliagestion.es/Portals/inmograndiora/Images/1246/27462407.jpg","https://media.mobiliagestion.es/Portals/inmograndiora/Images/1246/27462409.jpg","https://media.mobiliagestion.es/Portals/inmograndiora/Images/1246/27462411.jpg"],
-		description: "An exceptional off-market opportunity: an authentic Catalan masia available for long-term or seasonal rental, presented exclusively to a select international clientele and never listed on public portals. Set in a privileged enclave of Alella, minutes from Barcelona, this historic estate combines traditional architecture with contemporary comfort and sustainability. Rehabilitated with premium materials, it preserves its stone walls, whitewashed walls, wooden beams and original doors. Spread over roughly 2.2 hectares of vineyards and forest, the property offers 930 m² built with absolute privacy. South-facing with sea views from most rooms, a grand living room with porch, indoor and outdoor dining, an equipped kitchen with pantry, an original wine cellar, and a gym with indoor pool. Fully self-sufficient: photovoltaic solar panels, aerothermal heating, underfloor heating and cooling, its own well, and energy certification A. Additional spaces include a closed garage for several vehicles, a 65 m² independent guest or service house, and a barbecue area with an outdoor kitchen. Ideal for international executives, relocating families, luxury holiday rentals or corporate housing.",
-	},
-	{
 		ref: '1275',
 		title: "Family house with pool and 1,000 m² garden in Alella Parc",
 		price: '€6,000 /month',
