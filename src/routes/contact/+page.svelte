@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import Header from '$lib/components/Header/Header.svelte';
 	import SiteFooter from '$lib/components/Footer/Footer.svelte';
+	import { t } from '$lib/i18n.svelte.ts';
 
 	// ── Lead form config ──
 	const WHATSAPP_NUMBER = '34604561945';
@@ -36,7 +37,7 @@
 	function submit(event: Event) {
 		event.preventDefault();
 		if (!name.trim() || !phone.trim()) {
-			formMsg = 'Please fill in your name and phone.';
+			formMsg = t('contact.err');
 			msgColor = '#c0392b';
 			flash();
 			return;
@@ -72,7 +73,7 @@
 		// Meta Pixel Lead
 		if (typeof window.fbq === 'function') window.fbq('track', 'Lead');
 
-		formMsg = 'Thank you! Your message is on its way — we answer within minutes.';
+		formMsg = t('contact.ok');
 		msgColor = '#2f8f4e';
 		flash();
 
@@ -113,8 +114,8 @@
 	<div class="wrap">
 		<div class="kick">Luxury Rental · Maresme</div>
 		<div class="rule"></div>
-		<h1>Contact <span>Us</span></h1>
-		<p>Leave your details — we answer within minutes with everything you need.</p>
+		<h1>{t('contact.h1a')}<span>{t('contact.h1b')}</span></h1>
+		<p>{t('contact.sub')}</p>
 	</div>
 </div>
 
@@ -136,12 +137,12 @@
 					<div class="side-note">WhatsApp · Telegram · Phone</div>
 				</div>
 				<div class="form-fields">
-					<h3>Contact us</h3>
+					<h3>{t('contact.form.h')}</h3>
 					<form onsubmit={submit} oninput={trackFormStart} novalidate>
-						<label for="name">Your name</label>
+						<label for="name">{t('contact.name')}</label>
 						<input id="name" type="text" bind:value={name} placeholder="John Smith" autocomplete="name" required />
 
-						<label for="phone">Phone / WhatsApp</label>
+						<label for="phone">{t('contact.phone')}</label>
 						<div class="phone-row">
 							<select class="cc" bind:value={countryCode} aria-label="Country code">
 								<option value="+34">🇪🇸 +34</option>
@@ -181,44 +182,44 @@
 							<input id="phone" type="tel" bind:value={phone} placeholder="600 000 000" autocomplete="tel" required />
 						</div>
 
-						<label for="city">City / Area</label>
+						<label for="city">{t('contact.city')}</label>
 						<select id="city" bind:value={city}>
-							<option value="">Select…</option>
+							<option value="">{t('contact.select')}</option>
 							<option>Barcelona</option>
 							<option>Cabrils</option>
 							<option>Premià de Dalt</option>
 							<option>Sant Andreu de Llavaneres</option>
 							<option>Caldes d'Estrac</option>
 							<option>Alella</option>
-							<option>Other</option>
+							<option>{t('contact.other')}</option>
 						</select>
 
-						<label for="family">Family / Household</label>
+						<label for="family">{t('contact.family')}</label>
 						<select id="family" bind:value={family}>
-							<option value="">Select…</option>
-							<option>Single</option>
-							<option>Couple</option>
-							<option>Couple + children</option>
-							<option>Family with 3+ children</option>
-							<option>Other</option>
+							<option value="">{t('contact.select')}</option>
+							<option>{t('family.single')}</option>
+							<option>{t('family.couple')}</option>
+							<option>{t('family.couple_kids')}</option>
+							<option>{t('family.family3')}</option>
+							<option>{t('contact.other')}</option>
 						</select>
 
-						<label for="msg">What are you looking for?</label>
+						<label for="msg">{t('contact.msg')}</label>
 						<textarea
 							id="msg"
 							bind:value={msg}
-							placeholder="Area, bedrooms, budget, move-in date..."
+							placeholder={t('contact.msg.ph')}
 						></textarea>
 
-						<button type="submit">Send message</button>
+						<button type="submit">{t('contact.send')}</button>
 					<div class="wa-alt">
-						Or write us on
+						{t('contact.wa')}
 						<a href="https://wa.me/{WHATSAPP_NUMBER}" target="_blank" rel="noopener">WhatsApp</a>
 					</div>
 						<div class="form-msg" style="display:{formMsg ? 'block' : 'none'}; color:{msgColor}">
 							{formMsg}
 						</div>
-						<div class="answer">We answer within minutes</div>
+						<div class="answer">{t('contact.answer')}</div>
 					</form>
 				</div>
 			</div>

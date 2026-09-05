@@ -5,6 +5,7 @@
 	import FloatingContact from '$lib/components/FloatingContact/FloatingContact.svelte';
 	import PropertyCard from '$lib/components/PropertyCard/PropertyCard.svelte';
 	import { properties, PHONE_MAIN, PHONE_MAIN_LINK, WHATSAPP, TELEGRAM } from '$lib/assets/data';
+	import { t } from '$lib/i18n.svelte.ts';
 
 	let visible = $state(9);
 	function showMore() {
@@ -53,7 +54,7 @@
 	function submitHero(event) {
 		event.preventDefault();
 		if (!heroName.trim() || !heroContact.trim()) {
-			heroMsg = 'Enter your name and WhatsApp number.';
+			heroMsg = t('hero.err');
 			heroOk = false;
 			return;
 		}
@@ -91,7 +92,7 @@
 	function requestChecklist(event) {
 		event.preventDefault();
 		if (!leadName.trim() || !leadContact.trim()) {
-			leadMsg = 'Enter your name and email/phone.';
+			leadMsg = t('lead.err');
 			leadOk = false;
 			return;
 		}
@@ -148,64 +149,64 @@
 		<img src="/img/hero_rental.jpg" alt="Luxury villa with pool in Maresme, Barcelona" />
 	</div>
 	<div class="hero-copy">
-		<div class="eyebrow">Rentals · Barcelona · Maresme</div>
-		<h1>Luxury villa <em>rentals</em>. Maresme &amp; Barcelona</h1>
-		<p>Exclusive villas and apartments for rent across Maresme &amp; Barcelona — most never reach the public portals.</p>
-		<div class="hero-trust"><span>Verified homes</span> · Flexible stays · Turnkey</div>
+		<div class="eyebrow">{t('hero.eyebrow')}</div>
+		<h1>{t('hero.h1a')}<em>{t('hero.h1em')}</em>{t('hero.h1b')}</h1>
+		<p>{t('hero.sub')}</p>
+		<div class="hero-trust"><span>{t('hero.trust.span')}</span> · {t('hero.trust').replace(t('hero.trust.span') + ' · ', '')}</div>
 
 		<form class="hero-form" onsubmit={submitHero} novalidate>
-			<input type="text" bind:value={heroName} placeholder="Your name" autocomplete="name" />
+			<input type="text" bind:value={heroName} placeholder={t('hero.name')} autocomplete="name" />
 			<div class="phone-row">
 				<select class="cc" bind:value={heroCountryCode} aria-label="Country code">
 					{#each COUNTRY_CODES as [code, label]}
 						<option value={code}>{label}</option>
 					{/each}
 				</select>
-				<input type="tel" bind:value={heroContact} placeholder="WhatsApp / phone" autocomplete="tel" />
+				<input type="tel" bind:value={heroContact} placeholder={t('hero.phone')} autocomplete="tel" />
 			</div>
-			<button class="btn" type="submit">Get the off-market list</button>
-			<div class="hero-form-note">Free · No spam · We answer within minutes</div>
+			<button class="btn" type="submit">{t('hero.cta')}</button>
+			<div class="hero-form-note">{t('hero.note')}</div>
 		</form>
 		{#if heroMsg}<div class="hero-msg">{heroMsg}</div>{/if}
-		{#if heroOk}<div class="hero-msg ok">Thanks! We'll reply within 5 minutes. ✅</div>{/if}
+		{#if heroOk}<div class="hero-msg ok">{t('hero.ok')}</div>{/if}
 
-		<div class="cat-note"><a href="#top">Browse rental properties ↓</a> · Maresme · Barcelona</div>
+		<div class="cat-note"><a href="#top">{t('hero.browse')}</a> · Maresme · Barcelona</div>
 	</div>
 </div>
 
 <div class="trust">
 	<div class="wrap inner">
-		<div class="item"><b>+10</b><span>years of experience</span></div>
-		<div class="item"><b>+8</b><span>languages spoken</span></div>
-		<div class="item"><b>+200</b><span>properties</span></div>
+		<div class="item"><b>+10</b><span>{t('trust.years')}</span></div>
+		<div class="item"><b>+8</b><span>{t('trust.langs')}</span></div>
+		<div class="item"><b>+200</b><span>{t('trust.props')}</span></div>
 	</div>
 </div>
 
 <div class="wrap" style="margin-top:26px">
 	<div class="whyus">
-		<h2 class="sec">Why rent with <span>Grandiora</span></h2>
+		<h2 class="sec">{t('why.title1')}<span>{t('why.title2')}</span></h2>
 		<div class="why-grid">
 			<div class="why-item">
 				<div class="why-num">01</div>
-				<h3>We speak your language</h3>
-				<p>Spanish, English, French, Portuguese, Russian and Ukrainian. No lost-in-translation moments when you're signing a lease abroad.</p>
+				<h3>{t('why.1.h')}</h3>
+				<p>{t('why.1.p')}</p>
 			</div>
 			<div class="why-item">
 				<div class="why-num">02</div>
-				<h3>Off-market access</h3>
-				<p>Most of our villas never reach Idealista or Fotocasa. They go to our clients first, before they're public.</p>
+				<h3>{t('why.2.h')}</h3>
+				<p>{t('why.2.p')}</p>
 			</div>
 			<div class="why-item">
 				<div class="why-num">03</div>
-				<h3>On Passeig de Gràcia</h3>
-				<p>A real office in the heart of Barcelona, not a call centre. Meet us, or handle everything remotely.</p>
+				<h3>{t('why.3.h')}</h3>
+				<p>{t('why.3.p')}</p>
 			</div>
 		</div>
 	</div>
 </div>
 
 <div class="wrap" id="top">
-	<h2 class="sec">Our <span>gems</span></h2>
+	<h2 class="sec">{t('gems.title1')}<span>{t('gems.title2')}</span></h2>
 	<div class="grid">
 		{#each properties.slice(0, visible) as p (p.title)}
 			<PropertyCard {p} />
@@ -213,17 +214,17 @@
 	</div>
 	{#if visible < properties.length}
 		<div class="show-more">
-			<button class="btn" onclick={showMore}>Show more</button>
+			<button class="btn" onclick={showMore}>{t('gems.more')}</button>
 		</div>
 	{/if}
 </div>
 
 <div class="wrap reviews-sec" style="margin-top:26px">
 	<div class="reviews">
-		<h2 class="sec">What our <span>clients</span> say</h2>
+		<h2 class="sec">{t('reviews.title1')}<span>{t('reviews.title2')}</span>{t('reviews.title3')}</h2>
 		<div class="rev-rating">
 			<span class="stars">★★★★★</span>
-			<span class="rev-note">Rated on Google · Real client reviews</span>
+			<span class="rev-note">{t('reviews.rating')}</span>
 		</div>
 		<div class="rev-grid">
 			<div class="rev-card">
@@ -239,7 +240,7 @@
 			<div class="rev-card">
 				<div class="rev-stars">★★★★★</div>
 				<p>«Daniela is a wonderful person and a very professional agent at Grandiora Real Estate. I highly recommend her — her services are excellent.»</p>
-				<div class="rev-name">Verified client</div>
+				<div class="rev-name">{t('reviews.verified')}</div>
 			</div>
 			<div class="rev-card">
 				<div class="rev-stars">★★★★★</div>
@@ -249,35 +250,35 @@
 			<div class="rev-card">
 				<div class="rev-stars">★★★★★</div>
 				<p>«Emanuela is simply amazing. She understands what we're looking for and has a great eye for beautiful homes. She made the whole process simple and transparent, and even worked with our mortgage broker to make it easier. 10/10, highly recommend!»</p>
-				<div class="rev-name">Verified client</div>
+				<div class="rev-name">{t('reviews.verified')}</div>
 			</div>
 		</div>
 		<div class="rev-more">
-			<a class="btn" href="https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21KUE1qbDVOV3RQZW1KNmQzSldTR2xEUzNoSWRIYxAB!2m1!1s0x0:0x17676b023d5c97a1!3m1!1s2@1:CAIQACodChtycF9oOmJPMjl5NWtPemJ6d3JWSGlDS3hIdHc%7C%7C?hl=en" target="_blank" rel="noopener">Read all reviews on Google</a>
+			<a class="btn" href="https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21KUE1qbDVOV3RQZW1KNmQzSldTR2xEUzNoSWRIYxAB!2m1!1s0x0:0x17676b023d5c97a1!3m1!1s2@1:CAIQACodChtycF9oOmJPMjl5NWtPemJ6d3JWSGlDS3hIdHc%7C%7C?hl=en" target="_blank" rel="noopener">{t('reviews.more')}</a>
 		</div>
 	</div>
 </div>
 
 <div class="wrap" style="margin-top:26px">
 	<div class="leadmagnet">
-		<h3>Free checklist: rent in Spain without losing your deposit</h3>
-		<p>10 points that save you from extra costs and headaches when renting.</p>
+		<h3>{t('checklist.h')}</h3>
+		<p>{t('checklist.p')}</p>
 		<form onsubmit={requestChecklist} novalidate>
-			<input type="text" bind:value={leadName} placeholder="Your name" />
-			<input type="text" bind:value={leadContact} placeholder="Email or WhatsApp number" />
-			<button class="btn" type="submit">Get the free checklist</button>
+			<input type="text" bind:value={leadName} placeholder={t('hero.name')} />
+			<input type="text" bind:value={leadContact} placeholder={t('checklist.contact')} />
+			<button class="btn" type="submit">{t('checklist.cta')}</button>
 		</form>
 		{#if leadMsg}<div class="lead-msg">{leadMsg}</div>{/if}
-		{#if leadOk}<div class="lead-ok">Your checklist is opening in a new tab. Good luck! ✅</div>{/if}
+		{#if leadOk}<div class="lead-ok">{t('checklist.ok')}</div>{/if}
 	</div>
 </div>
 
 <div class="wrap" style="margin-top:26px">
 	<div class="offmarket">
-		<h3>Can't find what you're looking for?</h3>
-		<p>Contact us and we'll share our entire off-market portfolio. We answer within minutes.</p>
-		<a class="btn" href="/contact">Contact us</a>
-		<span class="answer">We answer in 5 minutes</span>
+		<h3>{t('offmarket.h')}</h3>
+		<p>{t('offmarket.p')}</p>
+		<a class="btn" href="/contact">{t('offmarket.cta')}</a>
+		<span class="answer">{t('offmarket.answer')}</span>
 	</div>
 </div>
 
@@ -286,17 +287,17 @@
 		<div class="mava"><img src="/img/anastasia.png" alt="Anastasia" /></div>
 		<div class="mbody">
 			<h3>Anastasia</h3>
-			<p>I speak Spanish, English, French, Portuguese, Russian and Ukrainian. Contact me — I'll find the perfect home for you.</p>
-			<a class="btn" href={WHATSAPP}>Contact me — I answer in under 5 mins</a>
+			<p>{t('manager.p')}</p>
+			<a class="btn" href={WHATSAPP}>{t('manager.cta')}</a>
 		</div>
 	</div>
 </div>
 
 <div class="wrap" style="margin-top:26px">
 	<div class="final-cta">
-		<h2 class="sec">Let's <span>talk</span></h2>
+		<h2 class="sec">{t('final.title1')}<span>{t('final.title2')}</span></h2>
 		<div class="fc-row">
-			<a class="btn" href={PHONE_MAIN_LINK}>📞 Call {PHONE_MAIN}</a>
+			<a class="btn" href={PHONE_MAIN_LINK}>📞 {t('final.call')} {PHONE_MAIN}</a>
 			<a class="btn wa" href={WHATSAPP}><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>
 			<a class="btn tg" href={TELEGRAM}><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg> Telegram</a>
 		</div>
@@ -305,7 +306,7 @@
 
 <div class="phones">
 	<div class="wrap">
-		<div class="label">Call us in your language</div>
+		<div class="label">{t('phones.label')}</div>
 		<div class="list">
 			<!-- <a class="ph" href={TELEGRAM}><div class="lang">🇷🇺 Russian</div><div class="num">+7 9...</div></a> -->
 			<a class="ph" href={PHONE_MAIN_LINK}><div class="lang">🇪🇸 Español</div><div class="num">{PHONE_MAIN}</div></a>
